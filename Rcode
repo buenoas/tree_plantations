@@ -129,7 +129,7 @@ zurita_local$birdlife[zurita_local$species_paper == "Poospiza lateralis"] = "Mic
 zurita_local$birdlife[zurita_local$species_paper == "Scytalopus speluncae"] = "Scytalopus pachecoi" # distribution
 zurita_local$birdlife[zurita_local$species_paper == "Thraupis sayaca"] = "Tangara sayaca" # synonym
 
-# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA ARGENTINA
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
 zurita_local$birdlife[is.na(match(zurita_local$birdlife, spp_maps_zurita))] # Tudo certo
 
 # PREPARA OS DADOS PARA AS ANALISES DE RAREFACAO
