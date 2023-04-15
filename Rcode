@@ -229,16 +229,53 @@ head(zurita_regional)
 url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Amarante2023.txt"
 
 # IMPORTA OS DADOS
-Amarante2023 = read.table(url, sep = "\t", header = TRUE)
+amarante = read.table(url, sep = "\t", header = TRUE)
 
-# Passa a coluna com o nomes das especies para as linhas
-rownames(Amarante2023) = Amarante2023$Especies
+# PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
+rownames(amarante) = amarante$Especies
 
-# Mantem apenas as colunas relevantes
-Amarante2023$Especies = NULL
-Amarante2023$Total.Geral = NULL
+# MANTEM APENAS AS COLUNAS RELEVANTES
+amarante$Especies = NULL
+amarante$Total.Geral = NULL
 
-# Renomeia as colunas
-colnames(Amarante2023) = c("natural_forest",
-                           "araucaria_plantation",
-                           "pine_plantation")
+# RENOMEIA AS COLUNAS
+colnames(amarante) = c("natural_forest",
+                       "araucaria_plantation",
+                       "pine_plantation")
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(amarante)
+
+
+# CONFERE O NOME DAS ESPECIES
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
+spp_maps_amarante = spp_maps$species[spp_maps$`Passo Fundo` == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+rownames(amarante)[which(is.na(match(rownames(amarante), spp_maps_amarante)))]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+amarante$birdlife = rownames(amarante)
+amarante$birdlife[rownames(amarante) == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+amarante$birdlife[rownames(amarante) == "Dendroma rufa"] = "Philydor rufum" # synonym
+amarante$birdlife[rownames(amarante) == "Lepidocolaptes squamatus"] = "Lepidocolaptes falcinellus" # distribution
+amarante$birdlife[rownames(amarante) == "Myiodynastes maculatus"] = "Myiodynastes solitarius" # distribution
+amarante$birdlife[rownames(amarante) == "Schiffornis turdina"] = "Schiffornis virescens" # distribution
+amarante$birdlife[rownames(amarante) == "Stilpnia preciosa"] = "Tangara preciosa" # synonym
+amarante$birdlife[rownames(amarante) == "Xenops rutilans"] = "Xenops rutilus" # synonym
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
+amarante$birdlife[which(is.na(match(amarante$birdlife, spp_maps_amarante)))]
+
+# ATUALIZA O NOME DAS LINHAS COM O NOME CORRIGIDO DAS ESPECIES
+rownames(amarante) = amarante$birdlife
+
+# REMOVE A COLUNA birdlife
+amarante$birdlife = NULL
+
+# ORDENA AS LINHAS ALFABETICAMENTE
+amarante[order(rownames(amarante)), ]
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(amarante)
