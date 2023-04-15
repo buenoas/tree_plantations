@@ -1,0 +1,60 @@
+Especie	Familia	Guilda	FO	PA	PP	PE
+Colaptes melanochloros	Picidae	Insetivoro	2			
+Crypturellus obsoletus	Tinamidae	Insetivoro	2			
+Euphonia chalybea	Emberizidae	Frugivoro	1			
+Penelope obscura	Cracidae	Onivoro	14			
+Sclerurus scansor	Furnariidae	Insetivoro	11			
+Serpophaga nigricans	Tyrannidae	Insetivoro	1			
+Tangara preciosa	Emberizidae	Onivoro	6			
+Triclaria malachitacea	Psittacidae	Frugivoro	1			
+Knipolegus cyanirostris	Tyrannidae	Insetivoro	1	1		
+Lepidocolaptes falcinellus	Dendrocolaptidae	Insetivoro	5	7		
+Theristicus caudatus	Threskiornithidae	Carnivoro	2	3		
+Trogon surrucura	Trogonidae	Frugivoro	1	2		
+Procnias nudicollis	Cotingidae	Frugivoro	7	4		
+Camptostoma obsoletum	Tyrannidae	Insetivoro	6	3	3	
+Chlorostilbon aureoventris	Trochilidae	Nectarivoro	7	2	1	
+Cyanocorax caeruleus	Corvidae	Onivoro	70	31	6	
+Leptasthenura setaria	Furnariidae	Insetivoro	24	33	2	
+Basileuterus culicivorus	Parulidae	Insetivoro	19	8	10	17
+B. leucoblepharus	Parulidae	Insetivoro	30	10	12	11
+Cacicus chrysopterus	Icteridae	Insetivoro	57	27	1	11
+Cyclarhis gujanensis	Vireonidae	Insetivoro	25	3	13	12
+Elaenia sp.	Tyrannidae	Insetivoro	9	2	13	6
+Heliobletus contaminatus	Furnariidae	Insetivoro	9	9	7	4
+Leptotila verreauxi	Columbidae	Frugivoro	2	6	2	2
+Leucochloris albicollis	Trochilidae	Nectarivoro	1	4	2	1
+Phylloscartes ventralis	Tyrannidae	Insetivoro	26	27	26	43
+Poospiza lateralis	Emberizidae	Onivoro	6	4	18	4
+Pyrrhura frontalis	Psittacidae	Frugivoro	29	4	9	6
+Saltator similis	Emberizidae	Granivoro	11	2	2	6
+Synallaxis spixi	Furnariidae	Insetivoro	2	2	2	6
+Thamnophilus caerulescens	Formicariidae	Insetivoro	25	8	2	4
+Turdus rufiventris	Muscicapidae	Onivoro	11	9	5	9
+Vireo olivaceus	Vireonidae	Insetivoro	3	7	3	5
+Cranioleuca obsoleta	Furnariidae	Insetivoro	5		5	
+Phyllomyias fasciatus	Tyrannidae	Insetivoro	2		6	
+Serpophaga subcristata	Tyrannidae	Insetivoro	2		2	
+Tityra inquisitor	Tyrannidae	Frugivoro	2		2	
+Troglodytes musculus	Troglodytidae	Insetivoro	19		8	
+Colaptes campestris	Picidae	Insetivoro	1		4	9
+Stephanophorus diadematus	Emberizidae	Frugivoro	2		6	3
+Amazona pretrei	Psittacidae	Frugivoro		4		
+Hylocharis chrysura	Trochilidae	Nectarivoro		1		
+Piculus aurulentus	Picidae	Insetivoro		4		
+Pipraeidea melanonota	Emberizidae	Frugivoro		1		
+Trogon rufus	Trogonidae	Frugivoro		2		
+Verniliostris spilogaster	Picidae	Insetivoro		2	3	
+Turdus amaurochalinus	Muscicapidae	Frugivoro		2	1	
+Campephilus robustus	Picidae	Insetivoro			3	
+Geothlypis aequinoctialis	Parulidae	Insetivoro			2	
+Rhynchotus rufescens	Tinamidae	Insetivoro			1	
+Synallaxis cinerascens	Furnariidae	Insetivoro			1	
+Scytalopus speluncae	Rhinocryptidae	Insetivoro			1	1
+Knipolegus lophotes	Tyrannidae	Insetivoro			1	2
+Myiarchus swainsoni	Tyrannidae	Insetivoro			4	1
+Passer domesticus	Passeridae	Onivoro			3	2
+Thraupis sayaca	Emberizidae	Frugivoro			7	3
+Cariama cristata	Cariamidae	Carnivoro				3
+Milvago chimachima	Falconidae	Carnivoro				2
+Zonotrichia capensis	Emberizidae	Granivoro				2

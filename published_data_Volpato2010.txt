@@ -1,0 +1,115 @@
+Species	Habitat	Feeding	Strata	NF	AP	PP	G test
+Anabacerthia amaurotis	FD	I	C	13.9	14.6	2.1	12.2*
+Baryphthengus ruficapillus	FD	F/O	S	30.6	6.3	4.2	29.1*
+Basileuterus culicivorus	FG	I	S	37.5	64.6	60.4	8.3*
+Basileuterus leucoblepharus	FG	I/O	S	106.9	100	139.6	7.5*
+Batara cinerea	FD	I	S		4.2	2.1	0.7ns
+Cacicus chrysopterus	FD	O	C	4.2	37.5	8.3	37.2*
+Cacicus haemorrhous	FG	F/O	C			2.1	
+Campephilus robustus	FG	I	S	4.2			
+Camptostoma obsoletum	FG	I	C	9.7	8.3	47.9	42.2*
+Campylorhamphus falcularius	FD	I	S	2.8			
+Chamaeza campanisona	FD	I/O	S	79.2	33.3		19.2*
+Chiroxiphia caudata	FG	F/O	S	91.7	62.5	20.8	48.4*
+Cnemotriccus fuscatus	FD	I	C	1.4			
+Colaptes melanochloros	FG	I	S	2.8	2.1		0.1ns
+Colonia colonus	FG	I/O	C	6.9	12.5	14.6	2.9ns
+Conirostrum speciosum	FG	I/O	C	1.4	8.3		5.5*
+Conopophaga lineata	FG	I/O	S	15.3	12.5	8.3	2.1ns
+Contopus cinereus	FG	I/O	S		12.5		
+Cranioleuca pallida	FD	I	C	4.2			
+Crypturellus obsoletus	FD	G	S	1.4	10.4	18.8	17.4*
+Cyanocompsa brissonii	FG	G	S			6.3	
+Cyanocorax caeruleus	FD	F/O	C	2.8	4.2		0.3ns
+Cyanocorax chrysops	FG	O	S	23.6	45.8	58.3	15.5*
+Cyclarhis gujanensis	FG	F/O	C	18.1	56.3	85.4	47.7*
+Dendrocolaptes platyrostris	FG	I	S	43.1	43.8	35.4	1.1ns
+Drymophila malura	FD	I	S		4.2	2.1	0.7ns
+Drymophila rubricollis	FD	I	S		2.1	10.4	6.0*
+Dryocopus galeatus	FD	I	S	1.4	2.1		0.1ns
+Dryocopus lineatus	FG	I	S	13.9	14.6	16.7	0.3ns
+Dysithamnus mentalis	FD	I	S	40.3	50	41.7	1.2ns
+Elaenia mesoleuca	FG	O	S	4.2	2.1		0.7ns
+Euphonia cyanocephala	FG	F/O	C	29.2	6.3	10.4	18.3*
+Euphonia violacea	FG	F/O	C	9.7			
+Heliobletus contaminatus	FD	I	C	1.4			
+Hemithraupis guira	FG	F/O	C	16.7	16.7	2.1	15.5*
+Hylophilus poicilotis	FD	O	C	22.2			
+Lathrotriccus euleri	FG	I/O	S	22.2	10.4	31.3	10.9*
+Lepidocolaptes squamatus	FD	I	S	13.9	10.4	16.7	1.4ns
+Leptasthenura setaria	FD	I	C	95.8	118.8		2.5ns
+Leptopogon amaurocephalus	FD	I/O	S	9.7	16.7	6.3	5.0ns
+Leptotila rufaxilla	FG	G	S	2.8			
+Leptotila verreauxi	FG	G	S		2.1		
+Leucocloris albicollis	FG	N	S		2.1	2.1	
+Mackenziaena leachi	FD	I/O	S			2.1	
+Megarhynchus pitangua	FG	I/O	C	2.8	2.1	4.2	0.7ns
+Melanerpes flavifrons	FG	I	C	5.6	2.1	18.8	16.9*
+Micrastur ruficollis	FD	C	C	20.8	22.9	16.7	1.0ns
+Micrastur semitorquatus	FD	C	C	1.4	16.7	6.2	15.5*
+Milvago chimachima	FG	O	C	9.7	22.9	22.9	6.9*
+Mionectes rufiventris	FD	I/O	S	20.8	2.1		17.7*
+Myiarchus swainsoni	FG	I/O	C	1.4	2.1	2.1	0.2 ns
+Myiodinastes maculatus	FG	F/O	C	16.7	16.7	33.3	7.8*
+Myiopagis caniceps	FG	O	C	20.8	20.8	16.7	0.6ns
+Myiornis auricularis	FD	O	S	1.4	6.3	2.1	3.8ns
+Odontophorus capueira	FD	G	S	4.2	2.1	10.4	6.4*
+Pachyramphus castaneus	FG	O	C	15.3	27.1	18.8	3.5ns
+Pachyramphus polychopterus	FG	O	C	20.8	33.3	31.3	3.3ns
+Pachyramphus validus	FG	O	S			2.1	
+Pachyramphus viridis	FG	O	C		6.3		
+Parula pitiayumi	FG	O	C	55.6	41.7	25	11.9*
+Patagioenas picazuro	FG	G	S	2.8	12.5	27.1	22.8*
+Penelope obscura	FG	F/O	S	4.2			
+Philydor atricapillus	FD	I	C	4.2	4.2	8.3	1.9ns
+Philydor lichtensteini	FD	I	C	1.4	4.2		1.4ns
+Philydor rufum	FD	I	C	26.4	2.1		24.5*
+Phyllomyias fasciatus	FG	O	C	8.3		2.1	4.0*
+Phylloscartes ventralis	FG	I	S	13.9	6.3		3.0ns
+Piculus aurulentus	FD	I	S	18.1	14.6	12.5	1.0ns
+Picumnus temmincki	FG	I	S			2.1	
+Pionus maximiliani	FG	F	C	11.1	2.1	4.2	7.2*
+Pitangus sulphuratus	FG	O	C	11.1	4.2	4.2	4.5ns
+Platyrinchus mystaceus	FD	I	S	61.1	39.6	12.5	34.9*
+Poospiza lateralis	FG	G	S			2.1	
+Procnias nudicollis	FD	F	C	47.2	18.7		12.7*
+Pteroglossus bailloni	FD	F	C	1.4			
+Pyroderus scutatus	FD	F	C	5.6	6.2		0.04ns
+Pyrrhocoma ruficeps	FD	I	S	11.1	12.5	45.8	30.6*
+Pyrrhura frontalis	FD	F	C	40.3	29.2	33.3	1.8ns
+Ramphastos dicoloru	FD	F	C	16.7			
+Rupornis magnirostris	FG	O	C	2.8	4.2	33.3	41.4*
+Saltator similis	FG	O	S	16.7	33.3	102.1	77.5*
+Schiffornis virescens	FG	I/O	S	66.7	75	27.1	26.1*
+Sclerurus scansor	FD	I/O	S		2.1		
+Scytalopus indigoticus	FD	I/O	S	4.2	8.3	8.3	1.8ns
+Selenidera maculirostris	FD	F	C		2.1		
+Sicalis flaveola	FG	G	S			22.9	
+Sittasomus griseicapillus	FD	I	S	87.5	79.2	37.5	23.2*
+Synallaxis cinerascens	FD	I	S	12.5	31.3	18.8	8.5*
+Synallaxis ruficapilla	FD	I	S	18.1	25	41.7	10.1*
+Synallaxis spixii	FG	I	S			8.3	
+Tachyphonus coronatus	FG	O	S	4.2	6.3	16.7	9.2*
+Tangara peruviana	FG	F	C	4.12	6.2		0.4ns
+Tapera naevia	FG	O	S	1.4		2.1	0.1ns
+Tersina viridis	FG	O	C	2.8			
+Thalurania glaucopis	FG	N	S			6.3	
+Thamnophilus caerulescens	FG	I	S	13.9	31.3	27.1	7.3*
+Thraupis sayaca	FG	F/O	C		14.6	16.7	0.1ns
+Tityra cayana	FG	F/O	C	22.2	6.3	10.4	10.1*
+Tityra inquisitor	FG	F/O	C	1.4		12.5	10.2*
+Tolmomyias sulphurescens	FG	I	S	5.6	22.9	6.3	15.2*
+Trichothraupis melanops	FD	F/O	S	6.9	16.7	12.5	4.1ns
+Troglodytes musculus	FG	I	S			25	
+Trogon rufus	FD	F/O	S	16.7	12.5	2.1	13.2*
+Trogon surrucura	FG	F/O	S	48.6	31.3	72.9	17.2*
+Turdus albicollis	FD	O	S	36.1	31.3	22.9	3.0ns
+Turdus amaurochalinus	FG	O	S	1.4			
+Turdus rufiventris	FG	O	S	44.4	33.3	41.7	1.7 ns
+Tyrannus melancholicus	FG	I/O	C	5.6		2.1	1.6ns
+Veniliornis spilogaster	FG	I	C	15.3	10.4	10.4	1.2ns
+Vireo olivaceus	FG	I/O	C	13.9	18.8	43.8	18.9*
+Xenops rutilians	FD	I	C		2.1		
+Xiphorhynchus fuscus	FD	I	S	50	22.9	33.3	10.4*
+Xyphocolaptes albicollis	FD	I	S	13.9	4.2	2.1	11.0*
+Zonotrichia capensis	FG	G	S	12.5	37.5	114.6	102.9*
