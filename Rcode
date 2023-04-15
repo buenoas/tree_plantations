@@ -275,7 +275,250 @@ rownames(amarante) = amarante$birdlife
 amarante$birdlife = NULL
 
 # ORDENA AS LINHAS ALFABETICAMENTE
-amarante[order(rownames(amarante)), ]
+amarante = amarante[order(rownames(amarante)), ]
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(amarante)
+
+
+#########################################
+### ORGANIZA OS DADOS DE FONSECA 2003 ###
+#########################################
+
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Fonseca2003.txt"
+
+# IMPORTA OS DADOS
+fonseca = read.table(url, sep = "\t", header = TRUE)
+
+# PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
+rownames(fonseca) = fonseca$Especie
+
+# MANTEM APENAS AS COLUNAS RELEVANTES
+fonseca$Especie = NULL
+fonseca$Familia = NULL
+fonseca$Guilda = NULL
+fonseca$PE = NULL
+
+# CONVERTE NA EM ZERO
+fonseca[is.na(fonseca)] = 0
+
+# RENOMEIA AS COLUNAS
+colnames(fonseca) = c("natural_forest",
+                      "araucaria_plantation",
+                      "pine_plantation")
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(fonseca)
+
+
+# CONFERE O NOME DAS ESPECIES
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
+spp_maps_fonseca = spp_maps$species[spp_maps$`Sao Francisco de Paula` == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+rownames(fonseca)[which(is.na(match(rownames(fonseca), spp_maps_fonseca)))]
+
+# REMOVE A ESPECIE EXOTICA
+fonseca = fonseca[-which(rownames(fonseca) == "Passer domesticus"), ]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+fonseca$birdlife = rownames(fonseca)
+fonseca$birdlife[rownames(fonseca) == "Chlorostilbon aureoventris"] = "Chlorostilbon lucidus" # synonym
+fonseca$birdlife[rownames(fonseca) == "Cyanocorax caeruleus"] = "Cyanocorax coeruleus" # spelling
+fonseca$birdlife[rownames(fonseca) == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+fonseca$birdlife[rownames(fonseca) == "B. leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
+fonseca$birdlife[rownames(fonseca) == "Elaenia sp."] = "Elaenia mesoleuca" # based on the vernacular name in the publication source
+fonseca$birdlife[rownames(fonseca) == "Poospiza lateralis"] = "Microspingus cabanisi" # synonym
+fonseca$birdlife[rownames(fonseca) == "Troglodytes musculus"] = "Troglodytes aedon" # synonym
+fonseca$birdlife[rownames(fonseca) == "Colaptes campestris"] = "Colaptes campestroides" # distribution
+fonseca$birdlife[rownames(fonseca) == "Verniliostris spilogaster"] = "Veniliornis spilogaster" # spelling
+fonseca$birdlife[rownames(fonseca) == "Thraupis sayaca"] = "Tangara sayaca" # synonym
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
+fonseca$birdlife[which(is.na(match(fonseca$birdlife, spp_maps_fonseca)))]
+
+# ATUALIZA O NOME DAS LINHAS COM O NOME CORRIGIDO DAS ESPECIES
+rownames(fonseca) = fonseca$birdlife
+
+# REMOVE A COLUNA birdlife
+fonseca$birdlife = NULL
+
+# ORDENA AS LINHAS ALFABETICAMENTE
+fonseca = fonseca[order(rownames(fonseca)), ]
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(fonseca)
+
+
+#########################################
+### ORGANIZA OS DADOS DE VOLPATO 2010 ###
+#########################################
+
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Volpato2010.txt"
+
+# IMPORTA OS DADOS
+volpato = read.table(url, sep = "\t", header = TRUE)
+
+# PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
+rownames(volpato) = volpato$Species
+
+# MANTEM APENAS AS COLUNAS RELEVANTES
+volpato$Species = NULL
+volpato$Habitat = NULL
+volpato$Feeding = NULL
+volpato$Strata = NULL
+volpato$G.test = NULL
+
+# CONVERTE NA EM ZERO
+volpato[is.na(volpato)] = 0
+
+# RENOMEIA AS COLUNAS
+colnames(volpato) = c("natural_forest",
+                      "araucaria_plantation",
+                      "pine_plantation")
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(volpato)
+
+# CONVERTE O INDICE PONTUAL DE ABUNDANCIA EM NUMERO DE INDIVIDUOS
+volpato$natural_forest = round(volpato$natural_forest * 1293 / sum(volpato$natural_forest))
+volpato$araucaria_plantation = round(volpato$araucaria_plantation * 839 / sum(volpato$araucaria_plantation))
+volpato$pine_plantation = round(volpato$pine_plantation * 864 / sum(volpato$pine_plantation))
+
+# CONFERE O NOME DAS ESPECIES
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
+spp_maps_volpato = spp_maps$species[spp_maps$Irati == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+rownames(volpato)[which(is.na(match(rownames(volpato), spp_maps_volpato)))]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+volpato$birdlife = rownames(volpato)
+volpato$birdlife[rownames(volpato) == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+volpato$birdlife[rownames(volpato) == "Basileuterus leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
+volpato$birdlife[rownames(volpato) == "Cranioleuca pallida"] = "Cranioleuca obsoleta" # distribution # CONFIRMAR
+volpato$birdlife[rownames(volpato) == "Cyanocompsa brissonii"] = "Cyanoloxia brissonii" # synonym
+volpato$birdlife[rownames(volpato) == "Cyanocorax caeruleus"] = "Cyanocorax coeruleus" # spelling
+volpato$birdlife[rownames(volpato) == "Dryocopus galeatus"] = "Celeus galeatus" # synonym
+volpato$birdlife[rownames(volpato) == "Dryocopus lineatus"] = "Hylatomus lineatus" # synonym
+volpato$birdlife[rownames(volpato) == "Lepidocolaptes squamatus"] = "Lepidocolaptes falcinellus" # distribution # CONFIRMAR
+volpato$birdlife[rownames(volpato) == "Leucocloris albicollis"] = "Leucochloris albicollis" # spelling
+volpato$birdlife[rownames(volpato) == "Mackenziaena leachi"] = "Mackenziaena leachii" # spelling
+volpato$birdlife[rownames(volpato) == "Megarhynchus pitangua"] = "Megarynchus pitangua" # spelling
+volpato$birdlife[rownames(volpato) == "Myiodinastes maculatus"] = "Myiodynastes solitarius" # distribution
+volpato$birdlife[rownames(volpato) == "Parula pitiayumi"] = "Setophaga pitiayumi" # synonym
+volpato$birdlife[rownames(volpato) == "Philydor lichtensteini"] = "Anabacerthia lichtensteini" # synonym
+volpato$birdlife[rownames(volpato) == "Picumnus temmincki"] = "Picumnus temminckii" # spelling
+volpato$birdlife[rownames(volpato) == "Poospiza lateralis"] = "Microspingus cabanisi" # synonym
+volpato$birdlife[rownames(volpato) == "Pyrrhocoma ruficeps"] = "Thlypopsis pyrrhocoma" # synonym
+volpato$birdlife[rownames(volpato) == "Ramphastos dicoloru"] = "Ramphastos dicolorus" # spelling
+volpato$birdlife[rownames(volpato) == "Scytalopus indigoticus"] = "Eleoscytalopus indigoticus" # synonym
+volpato$birdlife[rownames(volpato) == "Synallaxis spixii"] = "Synallaxis spixi" # spelling
+volpato$birdlife[rownames(volpato) == "Tangara peruviana"] = "Tangara preciosa" # distribution # CONFIRMAR
+volpato$birdlife[rownames(volpato) == "Thraupis sayaca"] = "Tangara sayaca" # synonym
+volpato$birdlife[rownames(volpato) == "Tityra cayana"] = "Tityra braziliensis" # distribution
+volpato$birdlife[rownames(volpato) == "Troglodytes musculus"] = "Troglodytes aedon" # synonym
+volpato$birdlife[rownames(volpato) == "Xenops rutilians"] = "Xenops rutilus" # synonym
+volpato$birdlife[rownames(volpato) == "Xyphocolaptes albicollis"] = "Xiphocolaptes albicollis" # spelling
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
+volpato$birdlife[which(is.na(match(volpato$birdlife, spp_maps_volpato)))]
+
+# ATUALIZA O NOME DAS LINHAS COM O NOME CORRIGIDO DAS ESPECIES
+rownames(volpato) = volpato$birdlife
+
+# REMOVE A COLUNA birdlife
+volpato$birdlife = NULL
+
+# ORDENA AS LINHAS ALFABETICAMENTE
+volpato = volpato[order(rownames(volpato)), ]
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(volpato)
+
+
+#######################################
+### ORGANIZA OS DADOS DE ROSSI 2015 ###
+#######################################
+
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Rossi2015.txt"
+
+# IMPORTA OS DADOS
+rossi = read.table(url, sep = "\t", header = TRUE)
+
+# REMOVE O AUTOR E O ANO DO NOME DAS ESPECIES
+rossi$Especies = word(rossi$Especies, 1, 2)
+
+# PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
+rownames(rossi) = rossi$Especies
+
+# MANTEM APENAS AS COLUNAS RELEVANTES
+rossi$Especies = NULL
+rossi$Estrato = NULL
+rossi$Guilda = NULL
+rossi$Sensibilidade = NULL
+rossi$Habito = NULL
+rossi$Teste.G = NULL
+rossi$p = NULL
+
+# SUBSTITUI VIRGULA POR PONTO
+rossi$FN = as.numeric(gsub(",", "\\.", rossi$FN))
+rossi$PN = as.numeric(gsub(",", "\\.", rossi$PN))
+rossi$PE = as.numeric(gsub(",", "\\.", rossi$PE))
+
+# CONVERTE NA EM ZERO
+rossi[is.na(rossi)] = 0
+
+# RENOMEIA AS COLUNAS
+colnames(rossi) = c("natural_forest",
+                    "araucaria_plantation",
+                    "pine_plantation")
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(rossi)
+
+# CONVERTE O INDICE PONTUAL DE ABUNDANCIA EM NUMERO DE INDIVIDUOS
+rossi$natural_forest = round(rossi$natural_forest * 1124 / sum(rossi$natural_forest))
+rossi$araucaria_plantation = round(rossi$araucaria_plantation * 970 / sum(rossi$araucaria_plantation))
+rossi$pine_plantation = round(rossi$pine_plantation * 923 / sum(rossi$pine_plantation))
+
+# CONFERE O NOME DAS ESPECIES
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
+spp_maps_rossi = spp_maps$species[spp_maps$`Tres Barras` == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+rownames(rossi)[which(is.na(match(rownames(rossi), spp_maps_rossi)))]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+rossi$birdlife = rownames(rossi)
+rossi$birdlife[rownames(rossi) == "Urubitinga urubitinga"] = "Buteogallus urubitinga" # synonym
+rossi$birdlife[rownames(rossi) == "Dryocopus lineatus"] = "Hylatomus lineatus" # synonym
+rossi$birdlife[rownames(rossi) == "Xenops rutilans"] = "Xenops rutilus" # synonym
+rossi$birdlife[rownames(rossi) == "Tityra cayana"] = "Tityra braziliensis" # distribution
+rossi$birdlife[rownames(rossi) == "Myiodynastes maculatus"] = "Myiodynastes solitarius" # distribution
+rossi$birdlife[rownames(rossi) == "Cyanocorax caeruleus"] = "Cyanocorax coeruleus" # spelling
+rossi$birdlife[rownames(rossi) == "Troglodytes musculus"] = "Troglodytes aedon" # synonym
+rossi$birdlife[rownames(rossi) == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+rossi$birdlife[rownames(rossi) == "Pyrrhocoma ruficeps"] = "Thlypopsis pyrrhocoma" # synonym
+rossi$birdlife[rownames(rossi) == "Poospiza cabanisi"] = "Microspingus cabanisi" # synonym
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
+rossi$birdlife[which(is.na(match(rossi$birdlife, spp_maps_rossi)))]
+
+# ATUALIZA O NOME DAS LINHAS COM O NOME CORRIGIDO DAS ESPECIES
+rownames(rossi) = rossi$birdlife
+
+# REMOVE A COLUNA birdlife
+rossi$birdlife = NULL
+
+# ORDENA AS LINHAS ALFABETICAMENTE
+rossi = rossi[order(rownames(rossi)), ]
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(rossi)
