@@ -1,0 +1,221 @@
+# CORES DOS AMBIENTES
+# Com roxo e marrom (chao de pinus)
+#"#66A61E" (verde)
+#"#745086" (roxo)
+#"#B28269" (marrom)
+
+# LIMPA A AREA DE TRABALHO
+remove(list = ls())
+
+# REMOVE A NOTACAO CIENTIFICA
+options(scipen = 999)
+
+# OBTEM RESULTADOS REPRODUZIVEIS
+set.seed(397068565) # numero gerado com o comando: sample(1:.Machine$integer.max, 1)
+
+# DEFINE A AREA DE TRABALHO
+#setwd("C:/Users/anderson/OneDrive/Documents/Pesquisa/Projetos/Projeto_FLORESTAS/Projeto_FLORESTAS_Aves/meta-analise")
+
+# CARREGA OS PACOTES
+library(stringr)
+library(janitor)
+library(readxl)
+library(ggplot2)
+library(iNEXT)
+library(rgeos)
+library(rgdal)
+
+
+###############################################
+### ORGANIZA OS DADOS DE ZUTIRA ET AL. 2006 ###
+###############################################
+
+# IMPORTA OS DADOS
+zurita = read_excel("https://github.com/buenoas/tree_plantations/blob/main/unpublished_data_Zurita2006.xlsx")
+
+# REMOVE LINHAS E COLUNAS EM BRANCO
+zurita = remove_empty(zurita, which = c("rows", "cols"), quiet = FALSE) # 1 coluna removida
+
+# REMOVE DADOS CONSTANTES
+remove_constant(zurita, quiet = FALSE) # Nao ha dados constantes
+
+# ISOLA DADOS DUPLICADOS
+get_dupes(zurita) # Nao ha dados duplicados
+
+# TRANSFORMA TIBBLE EM DATA.FRAME
+zurita = as.data.frame(zurita)
+
+# SEPARA OS CONJUNTOS DE DADOS LOCAL E REGIONAL
+zurita_local = zurita[, 5:8]
+zurita_regional = zurita[, 1:4]
+
+### LOCAL ###
+# RENOMEIA AS COLUNAS
+# REMOVE A PRIMEIRA LINHA, POIS O NOME DAS COLUNAS JA ESTA NO CABECALHO
+# MUDA A ORDEM DAS COLUNAS
+colnames(zurita_local) = c("species", "araucaria_plantation", "pine_plantation", "natural_forest")
+zurita_local = zurita_local[-1, ]
+zurita_local = zurita_local[, c(1, 4, 2, 3)]
+
+### REGIONAL ###
+# RENOMEIA AS COLUNAS
+# REMOVE A PRIMEIRA LINHA, POIS O NOME DAS COLUNAS JA ESTA NO CABECALHO
+# MUDA A ORDEM DAS COLUNAS
+colnames(zurita_regional) = c("species", "araucaria_plantation", "pine_plantation", "natural_forest")
+zurita_regional = zurita_regional[-1, ]
+zurita_regional = zurita_regional[, c(1, 4, 2, 3)]
+
+# ARRUMA O NOME DAS ESPECIES
+zurita_local$species = str_to_sentence(str_squish(zurita_local$species))
+zurita_regional$species = str_to_sentence(str_squish(zurita_regional$species))
+
+# TRANSFORMA NUMEROS PARA A CLASSE INTEGER
+zurita_local$natural_forest = as.integer(zurita_local$natural_forest)
+zurita_local$araucaria_plantation = as.integer(zurita_local$araucaria_plantation)
+zurita_local$pine_plantation = as.integer(zurita_local$pine_plantation)
+
+zurita_regional$natural_forest = as.integer(zurita_regional$natural_forest)
+zurita_regional$araucaria_plantation = as.integer(zurita_regional$araucaria_plantation)
+zurita_regional$pine_plantation = as.integer(zurita_regional$pine_plantation)
+
+# REMOVE AS ESPECIES SEM REGISTRO DE OCORRENCIA
+zurita_local = zurita_local[rowSums(zurita_local[, -1]) > 0, ]
+zurita_regional = zurita_regional[rowSums(zurita_regional[, -1]) > 0, ]
+
+# ATUALIZA O NOME DAS ESPECIES
+# IMPORTA A LISTA DE AVES PUBLICADA EM ZURITA ET AL. 2006
+zurita_spp = read.csv("./datasets/published_data_Zurita2006.txt", sep = "\t")
+zurita_spp = word(zurita_spp$Species, 1, 2)
+
+### LOCAL ###
+# CRIA UMA COLUNA COM OS NOMES DAS ESPECIES CONFORME PUBLICADO EM ZURITA ET AL. 2006
+zurita_local$species_paper = zurita_spp[match(zurita_local$species, zurita_spp)]
+
+# NOMES NAO ENCONTRADOS
+zurita_local_spp_not_found = zurita_local$species[is.na(zurita_local$species_paper)]
+cbind(zurita_local_spp_not_found)
+
+# ARRUMA OS NOMES NAO ENCONTRADOS CONFORME PUBLICADO EM ZURITA ET AL. 2006
+zurita_local$species_paper[zurita_local$species == "Cissops leveriana"] = "Cissopis leveriana"
+zurita_local$species_paper[zurita_local$species == "Mack leac"] = "Mackenziaena leachii"
+zurita_local$species_paper[zurita_local$species == "Odontophorus capuerira"] = "Odontophorus capueira"
+zurita_local$species_paper[zurita_local$species == "Tytira inquisitor"] = "Tityra inquisitor"
+
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps = as.data.frame(read_xlsx("./species_lists_BirdLife/lista_potencial_especies_por_area.xlsx"))
+spp_maps_zurita = spp_maps$species[spp_maps$`Urugua-i` == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+zurita_local$species_paper[which(is.na(match(zurita_local$species_paper, spp_maps_zurita)))]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+zurita_local$birdlife = zurita_local$species_paper
+zurita_local$birdlife[zurita_local$species_paper == "Aratinga leucophthalma"] = "Psittacara leucophthalmus" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+zurita_local$birdlife[zurita_local$species_paper == "Basileuterus leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Buteo magnirostris"] = "Rupornis magnirostris" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Carduelis magellanica"] = "Spinus magellanicus" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Chlorostilbon aureoventris"] = "Chlorostilbon lucidus" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Cissopis leveriana"] = "Cissopis leverianus" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Columba cayennensis"] = "Patagioenas cayennensis" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Columba picazuro"] = "Patagioenas picazuro" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Lathotriccus euleri"] = "Lathrotriccus euleri" # spelling
+zurita_local$birdlife[zurita_local$species_paper == "Megarhynchus pitangua"] = "Megarynchus pitangua" # spelling
+zurita_local$birdlife[zurita_local$species_paper == "Myiodynastes maculatus"] = "Myiodynastes solitarius" # distribution
+zurita_local$birdlife[zurita_local$species_paper == "Phylloscartes eximius"] = "Pogonotriccus eximius" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Platyrhynchus mystaceus"] = "Platyrinchus mystaceus" # spelling
+zurita_local$birdlife[zurita_local$species_paper == "Platysaris rufus"] = "Pachyramphus validus" # correction made based on the species English name
+zurita_local$birdlife[zurita_local$species_paper == "Poospiza lateralis"] = "Microspingus cabanisi" # synonym
+zurita_local$birdlife[zurita_local$species_paper == "Scytalopus speluncae"] = "Scytalopus pachecoi" # distribution
+zurita_local$birdlife[zurita_local$species_paper == "Thraupis sayaca"] = "Tangara sayaca" # synonym
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA ARGENTINA
+zurita_local$birdlife[is.na(match(zurita_local$birdlife, spp_maps_zurita))] # Tudo certo
+
+# PREPARA OS DADOS PARA AS ANALISES DE RAREFACAO
+rownames(zurita_local) = gsub(" ", " ", zurita_local$birdlife) # especies como nomes das linhas
+zurita_local = zurita_local[, 2:4] # seleciona so as colunas relevantes
+zurita_local = zurita_local[order(rownames(zurita_local)), ] # linhas em ordem alfabetica
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(zurita_local)
+
+
+### REGIONAL ###
+# CRIA UMA COLUNA COM OS NOMES DAS ESPECIES CONFORME PUBLICADO EM ZURITA ET AL. 2006
+zurita_spp_code = paste(str_sub(word(zurita_spp, 1), 1, 4),
+                        str_sub(word(zurita_spp, 2), 1, 4))
+zurita_regional$species_paper = zurita_spp[match(zurita_regional$species, zurita_spp_code)]
+
+# NOMES NAO ENCONTRADOS
+zurita_regional_spp_not_found = zurita_regional$species[is.na(zurita_regional$species_paper)]
+cbind(zurita_regional_spp_not_found)
+
+# CRIA UM VETOR COM UM CODIGO PARA OS NOMES DA BIRDLIFE
+# CODIGO NECESSARIO PARA DAR O MATCH
+birdlife_code = paste(str_sub(word(spp_maps_zurita, 1), 1, 4),
+                      str_sub(word(spp_maps_zurita, 2), 1, 4))
+
+# CRIA UMA COLUNA COM OS NOMES DAS ESPECIES ATUALIZADOS
+zurita_regional$birdlife = spp_maps_zurita[match(zurita_regional$species, birdlife_code)]
+
+# NOMES NAO ENCONTRADOS
+zurita_regional_spp_not_found = zurita_regional$species[is.na(zurita_regional$birdlife)]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS
+zurita_regional$birdlife[zurita_regional$species == "Amaz vers"] = "Chrysuronia versicolor"
+zurita_regional$birdlife[zurita_regional$species == "Arat leuc"] = "Psittacara leucophthalmus"
+zurita_regional$birdlife[zurita_regional$species == "Basi culi"] = "Basileuterus auricapilla"
+zurita_regional$birdlife[zurita_regional$species == "Basi leuc"] = "Myiothlypis leucoblephara"
+zurita_regional$birdlife[zurita_regional$species == "Bute magn"] = "Rupornis magnirostris"
+zurita_regional$birdlife[zurita_regional$species == "Camp leuc"] = "Campephilus leucopogon"
+zurita_regional$birdlife[zurita_regional$species == "Card mage"] = "Spinus magellanicus"
+zurita_regional$birdlife[zurita_regional$species == "Cery torq"] = "Megaceryle torquata"
+zurita_regional$birdlife[zurita_regional$species == "Chlo aure"] = "Chlorostilbon lucidus"
+zurita_regional$birdlife[zurita_regional$species == "Chlor amaz"] = "Chloroceryle amazona"
+zurita_regional$birdlife[zurita_regional$species == "Colu caye"] = "Patagioenas cayennensis"
+zurita_regional$birdlife[zurita_regional$species == "Colu pica"] = "Patagioenas picazuro"
+zurita_regional$birdlife[zurita_regional$species == "Cyan chri"] = "Cyanocorax chrysops"
+zurita_regional$birdlife[zurita_regional$species == "Drom phasi"] = "Dromococcyx phasianellus"
+zurita_regional$birdlife[zurita_regional$species == "Drym ferr"] = "Drymophila rubricollis"
+zurita_regional$birdlife[zurita_regional$species == "Dryo line"] = "Hylatomus lineatus"
+zurita_regional$birdlife[zurita_regional$species == "Geot fren"] = "Geotrygon montana"
+zurita_regional$birdlife[zurita_regional$species == "Hab rub"] = "Habia rubica"
+zurita_regional$birdlife[zurita_regional$species == "Hypod guta"] = "Hypoedaleus guttatus"
+zurita_regional$birdlife[zurita_regional$species == "Lato eule"] = "Lathrotriccus euleri"
+zurita_regional$birdlife[zurita_regional$species == "Leph seta"] = "Leptasthenura setaria"
+zurita_regional$birdlife[zurita_regional$species == "Mica semi"] = "Micrastur semitorquatus"
+zurita_regional$birdlife[zurita_regional$species == "Miyo macu"] = "Myiodynastes solitarius"
+zurita_regional$birdlife[zurita_regional$species == "Myia swas"] = "Myiarchus swainsoni"
+zurita_regional$birdlife[zurita_regional$species == "Pachy cast"] = "Pachyramphus castaneus"
+zurita_regional$birdlife[zurita_regional$species == "Paru piti"] = "Setophaga pitiayumi"
+zurita_regional$birdlife[zurita_regional$species == "Pene super"] = "Penelope superciliaris"
+zurita_regional$birdlife[zurita_regional$species == "Pyri leu"] = "Pyriglena leucoptera"
+zurita_regional$birdlife[zurita_regional$species == "Pyrr ruf"] = "Thlypopsis pyrrhocoma"
+zurita_regional$birdlife[zurita_regional$species == "Scap oryz"] = "Molothrus oryzivorus"
+zurita_regional$birdlife[zurita_regional$species == "Sita gris"] = "Sittasomus griseicapillus"
+zurita_regional$birdlife[zurita_regional$species == "Syna fron"] = "Synallaxis frontalis"
+zurita_regional$birdlife[zurita_regional$species == "Syna rufo"] = "Synallaxis ruficapilla"
+zurita_regional$birdlife[zurita_regional$species == "Synd ruf"] = "Syndactyla rufosuperciliata"
+zurita_regional$birdlife[zurita_regional$species == "Tachi coro"] = "Tachyphonus coronatus"
+zurita_regional$birdlife[zurita_regional$species == "Thra saya"] = "Tangara sayaca"
+zurita_regional$birdlife[zurita_regional$species == "Tity caya"] = "Tityra braziliensis"
+zurita_regional$birdlife[zurita_regional$species == "Todi plum"] = "Poecilotriccus plumbeiceps"
+
+# CONRRIGE A IDENTIFICACAO DE UMA ESPECIES
+# Tyrannus savana passa a ser Tityra inquisitor
+zurita_regional$birdlife[zurita_regional$species == "Tyra sava"] = "Tityra inquisitor"
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA REGIAO DE ESTUDO
+zurita_regional$birdlife[is.na(match(zurita_regional$birdlife, spp_maps_zurita))]
+
+# A distribuicao de Campephilus leucopogon e Synallaxis frontalis estao proximas da regiao de estudo e ocorrem na Argentina
+# Entao o registro dessas duas especies deve estar correto
+
+# PREPARA OS DADOS PARA AS ANALISES DE RAREFACAO
+rownames(zurita_regional) = gsub(" ", " ", zurita_regional$birdlife) # especies como nomes das linhas
+zurita_regional = zurita_regional[, 2:4] # seleciona so as colunas relevantes
+zurita_regional = zurita_regional[order(rownames(zurita_regional)), ] # linhas em ordem alfabetica
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(zurita_regional)
