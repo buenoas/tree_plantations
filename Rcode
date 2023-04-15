@@ -219,3 +219,26 @@ zurita_regional = zurita_regional[order(rownames(zurita_regional)), ] # linhas e
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(zurita_regional)
+
+
+##########################################
+### ORGANIZA OS DADOS DE AMARANTE 2023 ###
+##########################################
+
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Amarante2023.txt"
+
+# IMPORTA OS DADOS
+Amarante2023 = read.table(url, sep = "\t", header = TRUE)
+
+# Passa a coluna com o nomes das especies para as linhas
+rownames(Amarante2023) = Amarante2023$Especies
+
+# Mantem apenas as colunas relevantes
+Amarante2023$Especies = NULL
+Amarante2023$Total.Geral = NULL
+
+# Renomeia as colunas
+colnames(Amarante2023) = c("natural_forest",
+                           "araucaria_plantation",
+                           "pine_plantation")
