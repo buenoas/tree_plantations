@@ -246,7 +246,6 @@ colnames(amarante) = c("natural_forest",
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(amarante)
 
-
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
 spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
@@ -310,7 +309,6 @@ colnames(fonseca) = c("natural_forest",
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(fonseca)
-
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
@@ -522,3 +520,89 @@ rossi = rossi[order(rownames(rossi)), ]
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(rossi)
+
+
+####################################################
+### ORGANIZA OS DADOS DE PRESTES (MIST NET) 2003 ###
+####################################################
+
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Prestes2003mn.txt"
+
+# IMPORTA OS DADOS
+prestes_mn = read.table(url, sep = "\t", header = TRUE)
+
+# PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
+rownames(prestes_mn) = prestes_mn$Especies
+
+# MANTEM APENAS AS COLUNAS RELEVANTES
+prestes_mn$Especies = NULL
+prestes_mn$Total.C = NULL
+prestes_mn$Total.R = NULL
+prestes_mn$MN1.R = NULL
+prestes_mn$MN2.R = NULL
+prestes_mn$FA1.R = NULL
+prestes_mn$FA2.R = NULL
+prestes_mn$FP1.R = NULL
+prestes_mn$FP2.R = NULL
+
+# SOMA AS CAPTURAS POR TIPO FLORESTAL
+prestes_mn$natural_forest = prestes_mn$MN1.C + prestes_mn$MN2.C
+prestes_mn$araucaria_plantation = prestes_mn$FA1.C + prestes_mn$FA2.C
+prestes_mn$pine_plantation = prestes_mn$FP1.C + prestes_mn$FP2.C
+
+# MANTEM APENAS AS COLUNAS RELEVANTES
+prestes_mn$MN1.C = NULL
+prestes_mn$MN2.C = NULL
+prestes_mn$FA1.C = NULL
+prestes_mn$FA2.C = NULL
+prestes_mn$FP1.C = NULL
+prestes_mn$FP2.C = NULL
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(prestes_mn)
+
+# CONFERE O NOME DAS ESPECIES
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
+spp_maps_prestes_mn = spp_maps$species[spp_maps$`Passo Fundo` == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+rownames(prestes_mn)[which(is.na(match(rownames(prestes_mn), spp_maps_prestes_mn)))]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+prestes_mn$birdlife = rownames(prestes_mn)
+prestes_mn$birdlife[rownames(prestes_mn) == "Buteo magnirostris"] = "Rupornis magnirostris" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Stephanoxis lalandi"] = "Stephanoxis loddigesii" # distribution
+prestes_mn$birdlife[rownames(prestes_mn) == "Chorostilbon aureoventris"] = "Chlorostilbon lucidus" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Lepidocolaptes squamatus"] = "Lepidocolaptes falcinellus" # distribution
+prestes_mn$birdlife[rownames(prestes_mn) == "Xenops rutilans"] = "Xenops rutilus" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Tityra cayana"] = "Tityra braziliensis" # distribution
+prestes_mn$birdlife[rownames(prestes_mn) == "Myiodynastes maculatus"] = "Myiodynastes solitarius" # distribution
+prestes_mn$birdlife[rownames(prestes_mn) == "Empidonax euleri"] = "Lathrotriccus euleri" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Todirostrum plumbeiceps"] = "Poecilotriccus plumbeiceps" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Phyllomyas fasciatus"] = "Phyllomyias fasciatus" # spelling
+prestes_mn$birdlife[rownames(prestes_mn) == "Phylloscartes eximius"] = "Pogonotriccus eximius" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Cyanocorax caeruleus"] = "Cyanocorax coeruleus" # spelling
+prestes_mn$birdlife[rownames(prestes_mn) == "Turdus nigriceps"] = "Turdus subalaris" # distribution
+prestes_mn$birdlife[rownames(prestes_mn) == "Parula pitiayumi"] = "Setophaga pitiayumi" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+prestes_mn$birdlife[rownames(prestes_mn) == "Basileuterus leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Pyrrhocoma ruficeps"] = "Thlypopsis pyrrhocoma" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Cyanocompsa brissonii"] = "Cyanoloxia brissonii" # synonym
+prestes_mn$birdlife[rownames(prestes_mn) == "Poospiza lateralis"] = "Microspingus cabanisi" # synonym
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
+prestes_mn$birdlife[which(is.na(match(prestes_mn$birdlife, spp_maps_prestes_mn)))]
+
+# ATUALIZA O NOME DAS LINHAS COM O NOME CORRIGIDO DAS ESPECIES
+rownames(prestes_mn) = prestes_mn$birdlife
+
+# REMOVE A COLUNA birdlife
+prestes_mn$birdlife = NULL
+
+# ORDENA AS LINHAS ALFABETICAMENTE
+prestes_mn = prestes_mn[order(rownames(prestes_mn)), ]
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(prestes_mn)
