@@ -217,7 +217,7 @@ zurita_regional$birdlife[zurita_regional$species == "Tyra sava"] = "Tityra inqui
 
 # CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA REGIAO DE ESTUDO
 zurita_regional$birdlife[is.na(match(zurita_regional$birdlife, spp_maps_zurita))]
-# A distribuicao de Campephilus leucopogon e Synallaxis frontalis estao proximas da regiao de estudo e ocorrem na Argentina
+# A distribuicao de Campephilus leucopogon e Synallaxis frontalis esta proxima da regiao de estudo e ocorrem na Argentina
 # Entao o registro dessas duas especies deve estar correto
 
 # PREPARA OS DADOS PARA AS ANALISES DE RAREFACAO
@@ -259,7 +259,7 @@ head(amarante)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps_amarante = spp_maps$species[spp_maps$`Passo Fundo` == 1]
+spp_maps_amarante = spp_maps$species[spp_maps$Passo.Fundo == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
 rownames(amarante)[which(is.na(match(rownames(amarante), spp_maps_amarante)))]
@@ -285,6 +285,9 @@ amarante$birdlife = NULL
 
 # ORDENA AS LINHAS ALFABETICAMENTE
 amarante = amarante[order(rownames(amarante)), ]
+
+# ADICIONA O NOME DO DATASET
+amarante$datasetID = "Amarante2023"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(amarante)
@@ -322,7 +325,7 @@ head(fonseca)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps_fonseca = spp_maps$species[spp_maps$`Sao Francisco de Paula` == 1]
+spp_maps_fonseca = spp_maps$species[spp_maps$Sao.Francisco.de.Paula == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
 rownames(fonseca)[which(is.na(match(rownames(fonseca), spp_maps_fonseca)))]
@@ -354,6 +357,9 @@ fonseca$birdlife = NULL
 
 # ORDENA AS LINHAS ALFABETICAMENTE
 fonseca = fonseca[order(rownames(fonseca)), ]
+
+# ADICIONA O NOME DO DATASET
+fonseca$datasetID = "Fonseca2003"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(fonseca)
@@ -443,6 +449,9 @@ volpato$birdlife = NULL
 # ORDENA AS LINHAS ALFABETICAMENTE
 volpato = volpato[order(rownames(volpato)), ]
 
+# ADICIONA O NOME DO DATASET
+volpato$datasetID = "Volpato2010"
+
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(volpato)
 
@@ -495,7 +504,7 @@ rossi$pine_plantation = round(rossi$pine_plantation * 923 / sum(rossi$pine_plant
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps_rossi = spp_maps$species[spp_maps$`Tres Barras` == 1]
+spp_maps_rossi = spp_maps$species[spp_maps$Tres.Barras == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
 rownames(rossi)[which(is.na(match(rownames(rossi), spp_maps_rossi)))]
@@ -524,6 +533,9 @@ rossi$birdlife = NULL
 
 # ORDENA AS LINHAS ALFABETICAMENTE
 rossi = rossi[order(rownames(rossi)), ]
+
+# ADICIONA O NOME DO DATASET
+rossi$datasetID = "Rossi2015"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(rossi)
@@ -571,7 +583,7 @@ head(prestes_mn)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps_prestes_mn = spp_maps$species[spp_maps$`Passo Fundo` == 1]
+spp_maps_prestes_mn = spp_maps$species[spp_maps$Passo.Fundo == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
 rownames(prestes_mn)[which(is.na(match(rownames(prestes_mn), spp_maps_prestes_mn)))]
@@ -609,6 +621,9 @@ prestes_mn$birdlife = NULL
 
 # ORDENA AS LINHAS ALFABETICAMENTE
 prestes_mn = prestes_mn[order(rownames(prestes_mn)), ]
+
+# ADICIONA O NOME DO DATASET
+prestes_mn$datasetID = "Prestes2003mn"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(prestes_mn)
@@ -675,7 +690,7 @@ head(prestes_pc)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps_prestes_pc = spp_maps$species[spp_maps$`Passo Fundo` == 1]
+spp_maps_prestes_pc = spp_maps$species[spp_maps$Passo.Fundo == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
 rownames(prestes_pc)[which(is.na(match(rownames(prestes_pc), spp_maps_prestes_pc)))]
@@ -732,9 +747,11 @@ prestes_pc$birdlife = NULL
 # ORDENA AS LINHAS ALFABETICAMENTE
 prestes_pc = prestes_pc[order(rownames(prestes_pc)), ]
 
+# ADICIONA O NOME DO DATASET
+prestes_pc$datasetID = "Prestes2003pc"
+
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(prestes_pc)
-
 
 
 ###############################################
