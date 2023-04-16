@@ -27,11 +27,14 @@ library(rgdal)
 
 
 ###############################################
-### ORGANIZA OS DADOS DE ZUTIRA ET AL. 2006 ###
+### ORGANIZA OS DADOS DE ZURITA ET AL. 2006 ###
 ###############################################
 
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/unpublished_data_Zurita2006.txt"
+
 # IMPORTA OS DADOS
-zurita = read_excel("https://github.com/buenoas/tree_plantations/blob/main/unpublished_data_Zurita2006.xlsx")
+zurita = read.table(url, sep = "\t", header = TRUE)
 
 # REMOVE LINHAS E COLUNAS EM BRANCO
 zurita = remove_empty(zurita, which = c("rows", "cols"), quiet = FALSE) # 1 coluna removida
@@ -84,7 +87,8 @@ zurita_regional = zurita_regional[rowSums(zurita_regional[, -1]) > 0, ]
 
 # ATUALIZA O NOME DAS ESPECIES
 # IMPORTA A LISTA DE AVES PUBLICADA EM ZURITA ET AL. 2006
-zurita_spp = read.csv("./datasets/published_data_Zurita2006.txt", sep = "\t")
+zurita_spp = read.table("https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Zurita2006.txt",
+                        sep = "\t", header = TRUE)
 zurita_spp = word(zurita_spp$Species, 1, 2)
 
 ### LOCAL ###
@@ -102,8 +106,9 @@ zurita_local$species_paper[zurita_local$species == "Odontophorus capuerira"] = "
 zurita_local$species_paper[zurita_local$species == "Tytira inquisitor"] = "Tityra inquisitor"
 
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps = as.data.frame(read_xlsx("./species_lists_BirdLife/lista_potencial_especies_por_area.xlsx"))
-spp_maps_zurita = spp_maps$species[spp_maps$`Urugua-i` == 1]
+spp_maps = read.table("https://raw.githubusercontent.com/buenoas/tree_plantations/main/lista_potencial_especies_por_area.txt",
+                      sep = "\t", header = TRUE)
+spp_maps_zurita = spp_maps$species[spp_maps$Urugua.i == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
 zurita_local$species_paper[which(is.na(match(zurita_local$species_paper, spp_maps_zurita)))]
@@ -133,9 +138,12 @@ zurita_local$birdlife[zurita_local$species_paper == "Thraupis sayaca"] = "Tangar
 zurita_local$birdlife[is.na(match(zurita_local$birdlife, spp_maps_zurita))] # Tudo certo
 
 # PREPARA OS DADOS PARA AS ANALISES DE RAREFACAO
-rownames(zurita_local) = gsub(" ", " ", zurita_local$birdlife) # especies como nomes das linhas
+rownames(zurita_local) = zurita_local$birdlife # especies como nomes das linhas
 zurita_local = zurita_local[, 2:4] # seleciona so as colunas relevantes
 zurita_local = zurita_local[order(rownames(zurita_local)), ] # linhas em ordem alfabetica
+
+# ADICIONA O NOME DO DATASET
+zurita_local$datasetID = "Zurita2006loc"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(zurita_local)
@@ -161,6 +169,7 @@ zurita_regional$birdlife = spp_maps_zurita[match(zurita_regional$species, birdli
 
 # NOMES NAO ENCONTRADOS
 zurita_regional_spp_not_found = zurita_regional$species[is.na(zurita_regional$birdlife)]
+zurita_regional_spp_not_found
 
 # RENOMEIA AS ESPECIES NAO ENCONTRADAS
 zurita_regional$birdlife[zurita_regional$species == "Amaz vers"] = "Chrysuronia versicolor"
@@ -202,20 +211,22 @@ zurita_regional$birdlife[zurita_regional$species == "Thra saya"] = "Tangara saya
 zurita_regional$birdlife[zurita_regional$species == "Tity caya"] = "Tityra braziliensis"
 zurita_regional$birdlife[zurita_regional$species == "Todi plum"] = "Poecilotriccus plumbeiceps"
 
-# CONRRIGE A IDENTIFICACAO DE UMA ESPECIES
+# CORRIGE A IDENTIFICACAO DE UMA ESPECIES
 # Tyrannus savana passa a ser Tityra inquisitor
 zurita_regional$birdlife[zurita_regional$species == "Tyra sava"] = "Tityra inquisitor"
 
 # CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA REGIAO DE ESTUDO
 zurita_regional$birdlife[is.na(match(zurita_regional$birdlife, spp_maps_zurita))]
-
 # A distribuicao de Campephilus leucopogon e Synallaxis frontalis estao proximas da regiao de estudo e ocorrem na Argentina
 # Entao o registro dessas duas especies deve estar correto
 
 # PREPARA OS DADOS PARA AS ANALISES DE RAREFACAO
-rownames(zurita_regional) = gsub(" ", " ", zurita_regional$birdlife) # especies como nomes das linhas
+rownames(zurita_regional) = zurita_regional$birdlife # especies como nomes das linhas
 zurita_regional = zurita_regional[, 2:4] # seleciona so as colunas relevantes
 zurita_regional = zurita_regional[order(rownames(zurita_regional)), ] # linhas em ordem alfabetica
+
+# ADICIONA O NOME DO DATASET
+zurita_regional$datasetID = "Zurita2006reg"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(zurita_regional)
@@ -248,7 +259,6 @@ head(amarante)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
 spp_maps_amarante = spp_maps$species[spp_maps$`Passo Fundo` == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
@@ -312,7 +322,6 @@ head(fonseca)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
 spp_maps_fonseca = spp_maps$species[spp_maps$`Sao Francisco de Paula` == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
@@ -327,7 +336,7 @@ fonseca$birdlife[rownames(fonseca) == "Chlorostilbon aureoventris"] = "Chlorosti
 fonseca$birdlife[rownames(fonseca) == "Cyanocorax caeruleus"] = "Cyanocorax coeruleus" # spelling
 fonseca$birdlife[rownames(fonseca) == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
 fonseca$birdlife[rownames(fonseca) == "B. leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
-fonseca$birdlife[rownames(fonseca) == "Elaenia sp."] = "Elaenia mesoleuca" # based on the vernacular name in the publication source
+fonseca$birdlife[rownames(fonseca) == "Elaenia sp."] = "Elaenia mesoleuca" # correction made based on the species vernacular name
 fonseca$birdlife[rownames(fonseca) == "Poospiza lateralis"] = "Microspingus cabanisi" # synonym
 fonseca$birdlife[rownames(fonseca) == "Troglodytes musculus"] = "Troglodytes aedon" # synonym
 fonseca$birdlife[rownames(fonseca) == "Colaptes campestris"] = "Colaptes campestroides" # distribution
@@ -388,7 +397,6 @@ volpato$pine_plantation = round(volpato$pine_plantation * 864 / sum(volpato$pine
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
 spp_maps_volpato = spp_maps$species[spp_maps$Irati == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
@@ -487,7 +495,6 @@ rossi$pine_plantation = round(rossi$pine_plantation * 923 / sum(rossi$pine_plant
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
 spp_maps_rossi = spp_maps$species[spp_maps$`Tres Barras` == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
@@ -564,7 +571,6 @@ head(prestes_mn)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
 spp_maps_prestes_mn = spp_maps$species[spp_maps$`Passo Fundo` == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
@@ -669,7 +675,6 @@ head(prestes_pc)
 
 # CONFERE O NOME DAS ESPECIES
 # LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
-spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
 spp_maps_prestes_pc = spp_maps$species[spp_maps$`Passo Fundo` == 1]
 
 # COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
@@ -729,3 +734,93 @@ prestes_pc = prestes_pc[order(rownames(prestes_pc)), ]
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(prestes_pc)
+
+
+
+###############################################
+### ORGANIZA OS DADOS DE MENDONCA-LIMA 2012 ###
+###############################################
+
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/unpublished_data_Mendonca-Lima2012.txt"
+
+# IMPORTA OS DADOS
+lima = read.table(url, sep = "\t", header = TRUE)
+
+# MANTEM APENAS AS COLUNAS RELEVANTES
+lima = lima[, c(2, 3, 4)]
+
+# RENOMEIA AS COLUNAS
+colnames(lima) = c("habitat", "especie", "individuos")
+
+# REMOVE AS LINHAS EM BRANCO
+lima = na.omit(lima)
+
+# REMOVE AS LINHAS SEM IDENTIFICAO DAS AVES
+lima = lima[-which(lima$especie == "2009"), ]
+lima = lima[-which(lima$especie == "Picidae NI"), ]
+lima = lima[-which(lima$especie == "Saltator sp."), ]
+
+# REMOVE OS ESPACOS DESNECESSARIOS DO NOME DAS ESPECIES
+lima$especie = str_squish(lima$especie)
+
+# REMOVE AS LINHAS DOS HABITATS QUE NAO SAO DE INTERESSE
+# PINUS MEIA IDADE SEM SUB-BOSQUE E PINUS ANTIGO SEM SUB-BOSQUE
+lima = lima[-which(lima$habitat == "PM"), ]
+lima = lima[-which(lima$habitat == "PV"), ]
+
+# RENOMEIA O NOME DOS AMBIENTES
+lima$habitat[lima$habitat == "MN"] = "natural_forest"
+lima$habitat[lima$habitat == "AP"] = "araucaria_plantation"
+lima$habitat[lima$habitat == "PS"] = "pine_plantation"
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(lima)
+
+# CONFERE O NOME DAS ESPECIES
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps_lima = spp_maps$species[spp_maps$Gateados == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+spp_lima = sort(unique(lima$especie))
+spp_lima[which(is.na(match(spp_lima, spp_maps_lima)))]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+lima$especie[lima$especie == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+lima$especie[lima$especie == "Basileuterus leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
+lima$especie[lima$especie == "Cyanocompsa brissonii"] = "Cyanoloxia brissonii" # synonym
+lima$especie[lima$especie == "Myiodynastes maculatus"] = "Myiodynastes solitarius" # distribution
+lima$especie[lima$especie == "Parula pitiayumi"] = "Setophaga pitiayumi" # synonym
+lima$especie[lima$especie == "Poospiza cabanisi"] = "Microspingus cabanisi" # synonym
+lima$especie[lima$especie == "Poospiza lateralis"] = "Microspingus cabanisi" # synonym
+lima$especie[lima$especie == "Pyrrhocoma ruficeps"] = "Thlypopsis pyrrhocoma" # synonym
+lima$especie[lima$especie == "Scytalopus notorius"] = "Scytalopus speluncae" # synonym
+lima$especie[lima$especie == "Stephanohporus diadematus"] = "Stephanophorus diadematus" # spelling
+lima$especie[lima$especie == "Stephanoxis lalandi"] = "Stephanoxis loddigesii" # distribution
+lima$especie[lima$especie == "Troglodytes musculus"] = "Troglodytes aedon" # synonym
+lima$especie[lima$especie == "Xenops rutilans"] = "Xenops rutilus" # synonym
+
+# PRODUZ A MATRIZ DE ESPECIES POR HABITAT
+lima = as.data.frame(tapply(lima$individuos,
+                            list(lima$especie,
+                                 lima$habitat), sum))
+
+# CONVERTE NA EM ZERO
+lima[is.na(lima)] = 0
+
+# ORDENA AS COLUNAS
+lima = lima[, c("natural_forest",
+                "araucaria_plantation",
+                "pine_plantation")]
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
+rownames(lima)[which(is.na(match(rownames(lima), spp_maps_lima)))]
+
+# ORDENA AS LINHAS ALFABETICAMENTE
+lima = lima[order(rownames(lima)), ]
+
+# ADICIONA O NOME DO DATASET
+lima$datasetID = "Mendonca-Lima2012"
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(lima)
