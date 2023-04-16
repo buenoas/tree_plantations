@@ -847,15 +847,16 @@ head(lima)
 ### COMBINA TODOS OS DATASETS ###
 #################################
 
-datasets = rbind(amarante,
-                 fonseca,
-                 lima,
-                 prestes_mn,
-                 prestes_pc,
-                 rossi,
-                 volpato,
-                 zurita_local,
-                 zurita_regional)
+# Cria uma lista com todos os datasets
+datasets = list(Amarante2023 = amarante,
+                Fonseca2003 = fonseca,
+                Mendonca_Lima2012 = lima,
+                Prestes2003mn = prestes_mn,
+                Prestes2003pc = prestes_pc,
+                Rossi2015 = rossi,
+                Volpato2010 = volpato,
+                Zurita2006loc = zurita_local,
+                Zurita2006reg = zurita_regional)
 
-rbind(head(datasets),
-      tail(datasets))
+# Remove a coluna datasetID
+datasets = lapply(datasets, function(x) x[, -4])
