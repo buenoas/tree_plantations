@@ -234,7 +234,7 @@ amarante = read.table(url, sep = "\t", header = TRUE)
 # PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
 rownames(amarante) = amarante$Especies
 
-# MANTEM APENAS AS COLUNAS RELEVANTES
+# REMOVE AS COLUNAS DESNECESSARIAS
 amarante$Especies = NULL
 amarante$Total.Geral = NULL
 
@@ -293,7 +293,7 @@ fonseca = read.table(url, sep = "\t", header = TRUE)
 # PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
 rownames(fonseca) = fonseca$Especie
 
-# MANTEM APENAS AS COLUNAS RELEVANTES
+# REMOVE AS COLUNAS DESNECESSARIAS
 fonseca$Especie = NULL
 fonseca$Familia = NULL
 fonseca$Guilda = NULL
@@ -363,7 +363,7 @@ volpato = read.table(url, sep = "\t", header = TRUE)
 # PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
 rownames(volpato) = volpato$Species
 
-# MANTEM APENAS AS COLUNAS RELEVANTES
+# REMOVE AS COLUNAS DESNECESSARIAS
 volpato$Species = NULL
 volpato$Habitat = NULL
 volpato$Feeding = NULL
@@ -455,7 +455,7 @@ rossi$Especies = word(rossi$Especies, 1, 2)
 # PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
 rownames(rossi) = rossi$Especies
 
-# MANTEM APENAS AS COLUNAS RELEVANTES
+# REMOVE AS COLUNAS DESNECESSARIAS
 rossi$Especies = NULL
 rossi$Estrato = NULL
 rossi$Guilda = NULL
@@ -523,7 +523,7 @@ head(rossi)
 
 
 ####################################################
-### ORGANIZA OS DADOS DE PRESTES (MIST NET) 2003 ###
+### ORGANIZA OS DADOS DE PRESTES 2003 (MIST NET) ###
 ####################################################
 
 # URL OS DADOS
@@ -535,7 +535,7 @@ prestes_mn = read.table(url, sep = "\t", header = TRUE)
 # PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
 rownames(prestes_mn) = prestes_mn$Especies
 
-# MANTEM APENAS AS COLUNAS RELEVANTES
+# REMOVE AS COLUNAS DESNECESSARIAS
 prestes_mn$Especies = NULL
 prestes_mn$Total.C = NULL
 prestes_mn$Total.R = NULL
@@ -551,7 +551,7 @@ prestes_mn$natural_forest = prestes_mn$MN1.C + prestes_mn$MN2.C
 prestes_mn$araucaria_plantation = prestes_mn$FA1.C + prestes_mn$FA2.C
 prestes_mn$pine_plantation = prestes_mn$FP1.C + prestes_mn$FP2.C
 
-# MANTEM APENAS AS COLUNAS RELEVANTES
+# REMOVE AS COLUNAS DESNECESSARIAS
 prestes_mn$MN1.C = NULL
 prestes_mn$MN2.C = NULL
 prestes_mn$FA1.C = NULL
@@ -606,3 +606,129 @@ prestes_mn = prestes_mn[order(rownames(prestes_mn)), ]
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(prestes_mn)
+
+
+#######################################################
+### ORGANIZA OS DADOS DE PRESTES 2003 (POINT COUNT) ###
+#######################################################
+
+# URL OS DADOS
+url = "https://raw.githubusercontent.com/buenoas/tree_plantations/main/published_data_Prestes2003pc.txt"
+
+# IMPORTA OS DADOS
+prestes_pc = read.table(url, sep = "\t", header = TRUE)
+
+# PASSA A COLUNA COM O NOMES DAS ESPECIES PARA AS LINHAS
+rownames(prestes_pc) = prestes_pc$Especies
+
+# REMOVE AS COLUNAS DESNECESSARIAS
+prestes_pc$X = NULL
+prestes_pc$Especies = NULL
+prestes_pc$FO.MN1 = NULL
+prestes_pc$FO.MN2 = NULL
+prestes_pc$FO.FA1 = NULL
+prestes_pc$FO.FA2 = NULL
+prestes_pc$FO.PF1 = NULL
+prestes_pc$FO.PF2 = NULL
+prestes_pc$Status = NULL
+
+# SUBSTITUI VIRGULA POR PONTO
+prestes_pc$IPA.MN1 = as.numeric(gsub(",", "\\.", prestes_pc$IPA.MN1))
+prestes_pc$IPA.MN2 = as.numeric(gsub(",", "\\.", prestes_pc$IPA.MN2))
+prestes_pc$IPA.FA1 = as.numeric(gsub(",", "\\.", prestes_pc$IPA.FA1))
+prestes_pc$IPA.FA2 = as.numeric(gsub(",", "\\.", prestes_pc$IPA.FA2))
+prestes_pc$IPA.PF1 = as.numeric(gsub(",", "\\.", prestes_pc$IPA.PF1))
+prestes_pc$IPA.PF2 = as.numeric(gsub(",", "\\.", prestes_pc$IPA.PF2))
+
+# CONVERTE NA EM ZERO
+prestes_pc[is.na(prestes_pc)] = 0
+
+# CONVERTE O INDICE PONTUAL DE ABUNDANCIA EM NUMERO DE INDIVIDUOS
+prestes_pc$IPA.MN1 = round(prestes_pc$IPA.MN1 * 3373 / sum(prestes_pc$IPA.MN1))
+prestes_pc$IPA.MN2 = round(prestes_pc$IPA.MN2 * 3698 / sum(prestes_pc$IPA.MN2))
+prestes_pc$IPA.FA1 = round(prestes_pc$IPA.FA1 * 2883 / sum(prestes_pc$IPA.FA1))
+prestes_pc$IPA.FA2 = round(prestes_pc$IPA.FA2 * 3028 / sum(prestes_pc$IPA.FA2))
+prestes_pc$IPA.PF1 = round(prestes_pc$IPA.PF1 * 2952 / sum(prestes_pc$IPA.PF1))
+prestes_pc$IPA.PF2 = round(prestes_pc$IPA.PF2 * 3206 / sum(prestes_pc$IPA.PF2))
+
+# SOMA  POR TIPO FLORESTAL
+prestes_pc$natural_forest = prestes_pc$IPA.MN1 + prestes_pc$IPA.MN2
+prestes_pc$araucaria_plantation = prestes_pc$IPA.FA1 + prestes_pc$IPA.FA2
+prestes_pc$pine_plantation = prestes_pc$IPA.PF1 + prestes_pc$IPA.PF2
+
+# REMOVE AS COLUNAS DESNECESSARIAS
+prestes_pc$IPA.MN1 = NULL
+prestes_pc$IPA.MN2 = NULL
+prestes_pc$IPA.FA1 = NULL
+prestes_pc$IPA.FA2 = NULL
+prestes_pc$IPA.PF1 = NULL
+prestes_pc$IPA.PF2 = NULL
+
+# CONVERTE NA EM ZERO
+prestes_pc[is.na(prestes_pc)] = 0
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(prestes_pc)
+
+# CONFERE O NOME DAS ESPECIES
+# LISTA POTENCIAL DE ESPECIES FOI BASEADA NOS MAPAS DE DISTRIBUICAO DA BIRDLIFE
+spp_maps = as.data.frame(read_xlsx("C:/Users/carla/Downloads/lista_potencial_especies_por_area.xlsx"))
+spp_maps_prestes_pc = spp_maps$species[spp_maps$`Passo Fundo` == 1]
+
+# COMPARA A LISTA DE ESPECIES REGISTRADAS COM A LISTA POTENCIAL DE ESPECIES
+rownames(prestes_pc)[which(is.na(match(rownames(prestes_pc), spp_maps_prestes_pc)))]
+
+# RENOMEIA AS ESPECIES NAO ENCONTRADAS CONFORME BIRDLIFE 2022
+prestes_pc$birdlife = rownames(prestes_pc)
+prestes_pc$birdlife[rownames(prestes_pc) == "Buteo magnirostris"] = "Rupornis magnirostris" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Milvago chimango"] = "Phalcoboenus chimango" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Polyborus plancus"] = "Caracara plancus" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Columba picazuro"] = "Patagioenas picazuro" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Caprimulgus rufus"] = "Antrostomus rufus" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Hydropsalis brasiliana"] = "Hydropsalis torquata" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Stephanoxis lalandi"] = "Stephanoxis loddigesii" # distribution
+prestes_pc$birdlife[rownames(prestes_pc) == "Chlorostilbon aureoventris"] = "Chlorostilbon lucidus" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Ceryle torquata"] = "Megaceryle torquata" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Dryocopus lineatus"] = "Hylatomus lineatus" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Lepidocolaptes squamatus"] = "Lepidocolaptes falcinellus" # distribution
+prestes_pc$birdlife[rownames(prestes_pc) == "Philydor rufus"] = "Philydor rufum" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Xenops rutilans"] = "Xenops rutilus" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Machenzianea leachii"] = "Mackenziaena leachii" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Atilla phoenicurus"] = "Attila phoenicurus" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Tityra cayana"] = "Tityra braziliensis" # distribution
+prestes_pc$birdlife[rownames(prestes_pc) == "Myiodynastes maculatus"] = "Myiodynastes solitarius" # distribution
+prestes_pc$birdlife[rownames(prestes_pc) == "Empidonax euleri"] = "Lathrotriccus euleri" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Todirostrum plumbeiceps"] = "Poecilotriccus plumbeiceps" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Camptostoma obsotetum"] = "Camptostoma obsoletum" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Phyllomyas virescens"] = "Phyllomyias virescens" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Phyllomyas fasciatus"] = "Phyllomyias fasciatus" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Phyllomyas burmeisteri"] = "Phyllomyias burmeisteri" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Phylloscartes eximius"] = "Pogonotriccus eximius" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Notiochelidon cyanoleuca"] = "Pygochelidon cyanoleuca" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Cyanocorax caeruleus"] = "Cyanocorax coeruleus" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Cacicus chysopterus"] = "Cacicus chrysopterus" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Parula pitiayumi"] = "Setophaga pitiayumi" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Basileuterus culicivorus"] = "Basileuterus auricapilla" # distribution
+prestes_pc$birdlife[rownames(prestes_pc) == "Basileuterus leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Thraupis sayaca"] = "Tangara sayaca" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Pyrrhocoma ruficeps"] = "Thlypopsis pyrrhocoma" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Basileuterus leucoblepharus"] = "Myiothlypis leucoblephara" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Saltator aurantirostris"] = "Saltator aurantiirostris" # spelling
+prestes_pc$birdlife[rownames(prestes_pc) == "Cyanocompsa brissoni"] = "Cyanoloxia brissonii" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Poospiza lateralis"] = "Microspingus cabanisi" # synonym
+prestes_pc$birdlife[rownames(prestes_pc) == "Spinus magellanica"] = "Spinus magellanicus" # spelling
+
+# CONFERE SE TODOS OS NOMES ESTAO CORRETOS E OCORREM NA AREA DE ESTUDO
+prestes_pc$birdlife[which(is.na(match(prestes_pc$birdlife, spp_maps_prestes_pc)))]
+
+# ATUALIZA O NOME DAS LINHAS COM O NOME CORRIGIDO DAS ESPECIES
+rownames(prestes_pc) = prestes_pc$birdlife
+
+# REMOVE A COLUNA birdlife
+prestes_pc$birdlife = NULL
+
+# ORDENA AS LINHAS ALFABETICAMENTE
+prestes_pc = prestes_pc[order(rownames(prestes_pc)), ]
+
+# VISUALIZA A ESTRUTURA DOS DADOS
+head(prestes_pc)
