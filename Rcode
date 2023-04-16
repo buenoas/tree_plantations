@@ -841,3 +841,21 @@ lima$datasetID = "Mendonca-Lima2012"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(lima)
+
+
+#################################
+### COMBINA TODOS OS DATASETS ###
+#################################
+
+datasets = rbind(amarante,
+                 fonseca,
+                 lima,
+                 prestes_mn,
+                 prestes_pc,
+                 rossi,
+                 volpato,
+                 zurita_local,
+                 zurita_regional)
+
+rbind(head(datasets),
+      tail(datasets))
