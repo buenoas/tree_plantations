@@ -1,0 +1,126 @@
+Regional Scale					Local Scale			
+Species	Araucaria	Pine	Forest		Especie	Araucaria	Pine	Forest
+  Amau moes	0	0	2		  Amau moes	0	0	0
+  Amaz vers	0	1	0		  Amaz vers	0	0	0
+  Arat leuc 	0	0	11		Aratinga leucophthalma	0	1	1
+  Bary rufi	0	0	2		Baryphthengus ruficapillus	0	0	1
+  Basi culi	5	4	21		Basileuterus culicivorus	7	8	15
+  Basi leuc	2	4	18		Basileuterus leucoblepharus	22	18	35
+  Bata cine	0	0	2		  Bata cine	0	0	0
+  Bute magn	3	4	2		Buteo magnirostris	0	1	0
+Capsiempis flaveola	0	0	0		Capsiempis flaveola	2	2	7
+  Caci haem	2	1	0		  Caci haem	0	0	0
+  Camp leuc	0	0	2		  Camp leuc	0	0	0
+  Card mage	0	1	0		Carduelis magellanica	1	0	0
+  Cery torq	1	0	0		  Cery torq	0	0	0
+Celeus flavescens	0	0	0		Celeus flavescens	0	0	2
+  Cham camp	0	0	7		Chamaeza campanisona	0	2	10
+  Chir caud	0	0	1		Chiroxiphia caudata	0	0	3
+  Chlo aure	0	0	1		Chlorostilbon aureoventris	1	0	0
+  Chlor amaz	0	0	1		  Chlor amaz	0	0	0
+  Ciss leve	1	0	10		Cissops leveriana	5	2	0
+Colaptes melanochloros	0	0	0		Colaptes melanochloros	1	1	0
+  Colo colo	0	0	1		  Colo colo	0	0	0
+  Colu caye	0	2	8		Columba cayennensis	4	4	10
+  Colu pica	1	2	2		Columba picazuro	17	8	1
+  Cono line	0	0	2		Conopophaga lineata	2	1	0
+  Cora  atra	0	0	1		  Cora  atra	0	0	0
+Contopus cinereus	0	0	0		Contopus cinereus	0	0	1
+  Cory cucu	0	5	1		Coryphospingus cucullatus	0	4	0
+  Cory dela	0	0	2		Corythopis delalandi	0	0	2
+  Cran obso	0	0	6		  Cran obso	0	0	0
+  Crot majo	0	0	2		  Crot majo	0	0	0
+  Cryp obso	1	0	6		Crypturellus obsoletus	0	0	2
+  Cryp parv	2	2	0		  Cryp parv	0	0	0
+  Cryp tata	0	5	0		Crypturellus tataupa	11	3	0
+  Cyan  glau	0	0	2		  Cyan  glau	0	0	0
+  Cyan chri	13	5	6		Cyanocorax chrysops	9	13	4
+  Cycl guja	3	4	1		  Cycl guja	0	0	0
+  Drom phasi	0	0	2		  Drom phasi	0	0	0
+  Drym ferr	0	1	3		  Drym ferr	0	0	0
+  Drym malu	1	0	3		  Drym malu	0	0	0
+  Dryo line	1	1	1		  Dryo line	0	0	0
+  Dysi ment	0	1	7		Dysithamnus mentalis	0	0	5
+Geothlypis aequinoctialis	0	0	0		Geothlypis aequinoctialis	0	1	0
+  Elan forf	0	1	0		  Elan forf	0	0	0
+  Euph chlo	0	1	1		  Euph chlo	0	0	0
+  Euph viol	0	0	1		  Euph viol	0	0	0
+  Geot fren	0	0	2		  Geot fren	0	0	0
+  Gral vari	0	0	1		  Gral vari	0	0	0
+  Guir guir	3	0	0		  Guir guir	0	0	0
+  Hab rub	0	0	1		  Hab rub	0	0	0
+  Herp rufi	0	0	4		Herpsilochmus rufimarginatus	9	0	2
+  Hylo poic	1	0	0		  Hylo poic	0	0	0
+Hylopezus nattereri	0	0	0		Hylopezus nattereri	0	0	2
+  Hypod guta	0	0	5		Hypoedaleus guttatus	5	4	1
+  Icti plum	0	0	1		  Icti plum	0	0	0
+  Lato eule	1	0	3		Lathotriccus euleri	3	2	18
+Lepidocolaptes falcinellus	0	0	0		Lepidocolaptes falcinellus	0	1	2
+  Leph seta	10	0	0		Leptasthenura setaria	41	0	0
+  Lept amau	0	0	2		Leptopogon amaurocephalus	0	0	7
+Leptotila rufaxilla	0	0	0		Leptotila rufaxilla	0	0	3
+Leptotila verreauxi	0	0	0		Leptotila verreauxi	2	2	1
+Leucochloris albicollis	0	0	0		Leucochloris albicollis	0	0	1
+  Mack leac	0	0	1		  Mack leac	0	0	1
+  Mack seve	1	0	15		Mackenziaena severa	0	0	2
+  Mega pita	1	8	2		Megarhynchus pitangua	6	2	1
+  Mica semi	0	0	3		Micrastur semitorquatus	0	0	1
+Mionectes rufiventris	0	0	0		Mionectes rufiventris	0	0	2
+  Miyo macu	2	3	0		Myiodynastes maculatus	0	0	2
+  Myia swas	0	0	1		  Myia swas	0	0	0
+  Myio simi	0	0	1		  Myio simi	0	0	0
+  Myio viri	0	0	3		  Myio viri	0	0	0
+  Odon capu	0	0	1		Odontophorus capuerira	0	0	2
+  Pachy cast	0	0	1		Pachyramphus castaneus	0	0	1
+  Paru piti	0	0	2		  Paru piti	0	0	0
+  Pene super	0	0	2		  Pene super	0	0	0
+  Phae eury	0	0	6		Phaethornis eurynome	2	0	2
+  Phil atri	0	0	1		  Phil atri	0	0	0
+  Phil rufu	0	0	1		  Phil rufu	0	0	0
+  Phyl sylv	0	0	1		  Phyl sylv	0	0	0
+Phylloscartes eximius	0	0	0		Phylloscartes eximius	0	0	1
+  Piay caya	1	0	1		  Piay caya	0	0	0
+  Picu temm	0	0	5		Picumnus temminckii	0	1	0
+  Pion maxi	1	1	9		  Pion maxi	0	0	0
+  Pita sulp	8	8	0		Pitangus sulphuratus	1	3	2
+Platyrhynchus mystaceus	0	0	0		Platyrhynchus mystaceus	0	0	3
+Platysaris rufus	0	0	0		Platysaris rufus	0	1	0
+Poospiza lateralis	0	0	0		Poospiza lateralis	1	0	0
+  Pyri leu	0	0	8		Pyriglena leucoptera	2	0	11
+  Pyrr fron	0	1	3		  Pyrr fron	0	0	0
+  Pyrr ruf	0	0	1		  Pyrr ruf	0	0	0
+  Ramp dico	0	0	4		Ramphastos dicolorus	0	0	1
+  Ramp toco	0	0	5		Ramphastos toco	0	0	2
+Saltator coerulescens	0	0	0		Saltator coerulescens	2	2	0
+  Salt simi	2	2	2		Saltator similis	0	0	2
+Scytalopus speluncae	0	0	0		Scytalopus speluncae	0	0	4
+  Scap oryz	0	1	0		  Scap oryz	0	0	0
+Schiffornis virescens	0	0	0		Schiffornis virescens	0	0	8
+  Sita gris	0	0	5		Sittasomus griseicapillus	13	10	17
+Synallaxis cinerascens	0	0	0		Synallaxis cinerascens	0	4	6
+  Syna fron	0	2	0		  Syna fron	0	0	0
+  Syna rufo	1	0	2		Synallaxis ruficapilla	7	1	12
+  Syna spix	2	3	0		Synallaxis spixi	2	13	0
+  Synd ruf	0	0	7		  Synd ruf	0	0	0
+  Tachi coro	0	3	5		Tachyphonus coronatus	1	1	4
+Thalurania glaucopis	0	0	0		Thalurania glaucopis	2	0	0
+  Tape naev	1	1	1		  Tape naev	0	0	0
+  Tham caer	3	2	19		Thamnophilus caerulescens	28	30	9
+  Thra saya	5	9	0		Thraupis sayaca	3	0	0
+  Tina soli	0	0	1		  Tina soli	0	0	0
+  Tity caya	0	0	1		  Tity caya	0	0	0
+  Todi plum	2	0	7		  Todi plum	0	0	0
+  Tric mela	0	0	1		  Tric mela	0	0	0
+  Trog aedo	4	27	2		Troglodytes aedon	11	24	5
+Trogon rufus	0	0	0		Trogon rufus	0	0	3
+  Trog surr	3	2	15		Trogon surrucura	9	15	22
+  Turd albi	0	0	6		Turdus albicollis	0	0	3
+  Turd amau	1	5	0		Turdus amaurochalinus	11	0	2
+  Turd leuc	5	10	4		Turdus leucomelas	10	9	15
+  Turd rufi	2	0	1		Turdus rufiventris	17	8	1
+Tyrannus melancholicus	0	0	0		Tyrannus melancholicus	0	0	1
+  Tyra sava	0	1	0		Tytira inquisitor	0	0	3
+  Veni spil	0	0	2		Veniliornis spilogaster	0	1	0
+  Vire oliv	2	11	16		Vireo olivaceus	7	12	16
+  Zena auri	0	1	0		  Zena auri	0	0	0
+  Zono cape	3	17	0		Zonotrichia capensis	4	8	0

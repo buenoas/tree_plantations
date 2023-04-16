@@ -1,0 +1,765 @@
+		dados de 2008	ind		densidade (indiv/ha)	abundancia (indivi)			densidade	abundancia
+1C	PM	Veniliornis spilogaster	1	25	1,699	1,000	ITR			
+1C	PM	Sittasomus griseicapillus	1	25	1,699	1,000	ITR	ITR	3,397	2,001
+1A	PM	Phylloscartes ventralis	1	15	4,718					
+1B	PM	Phylloscartes ventralis	1	25	1,699	3,779	MI	MI	6,417	3,779
+1B	PM	Vireo olivaceus	1	25	1,699	1,000	POD	POD	1,699	1,000
+1A	PM	Cyanocorax caeruleus	4	25	6,794	4,002	FFI	FFI	6,794	4,002
+1C	PM	Troglodytes musculus	2	25	3,397	2,001	IB	IB	3,397	2,001
+1C	PM	Zonotrichia capensis	4	15	18,872					
+1B	PM	Zonotrichia capensis	5	25	8,493	16,118	GB	GB	27,365	16,118
+										
+2A	PM	Phylloscartes ventralis	1	15	4,718					
+2A	PM	Phylloscartes ventralis	1	25	1,699	3,779	MI	MI	6,417	3,779
+2A	PM	Zonotrichia capensis	5	25	8,493	5,002	GB	GB	8,493	5,002
+2B	PM	Sittasomus griseicapillus	1	25	1,699	1,000	ITR	ITR	1,699	1,000
+2C	PM	Turdus amaurochalinus	1	25	1,699	1,000	OB	OB	1,699	1,000
+										
+3A	PM	Vireo olivaceus	2	25	3,397	2,001	POD	POD	3,397	2,001
+3A	PM	Zonotrichia capensis	1	15	4,718					
+3A	PM	Zonotrichia capensis	2	25	3,397	4,780	GB	GB	11,512	6,781
+3B	PM	Turdus albicollis	1	15	4,718	2,779	POS	POS	4,718	2,779
+3C	PM	Phylloscartes ventralis	1	15	4,718	2,779	MI	MI	4,718	2,779
+3C	PM	Carduelis magellanica	2	25	3,397	2,001	GB			
+										
+4B	PM	Zonotrichia capensis	1	25	1,699	1,000	GB	GB	1,699	1,000
+										
+1A	PV	Zonotrichia capensis	1	15	4,718					
+1A	PV	Zonotrichia capensis	9	25	15,287	11,783	GB	GB	20,005	11,783
+1A	PV	Phylloscartes ventralis	2	25	3,397	2,001	MI	MI	3,397	2,001
+1A	PV	Troglodytes musculus	1	15	4,718					
+1A	PV	Troglodytes musculus	2	25	3,397	4,780	IB	IB	8,115	4,780
+1A	PV	Parula pitiayumi	1	25	1,699	1,000	PID	PID	1,699	1,000
+										
+2A	PV	Milvago chimachima	1	25	1,699	1,000	CD	CD	1,699	1,000
+2C	PV	Zonotrichia capensis	1	15	4,718					
+2A	PV	Zonotrichia capensis	6	25	10,191	8,782	GB	GB	14,909	8,782
+2B	PV	Turdus albicollis	1	25	1,699	1,000	POS	POS	1,699	1,000
+2C	PV	Trogon surrucura	2	25	3,397	2,001	FFI	FFI	3,397	2,001
+2C	PV	Stephanophorus diadematus	1	25	1,699	1,000	POD	POD	1,699	1,000
+										
+3A	PV	Zonotrichia capensis	4	25	6,794	4,002	GB	GB	6,794	4,002
+3B	PV	Troglodytes musculus	1	15	4,718					
+3C	PV	Troglodytes musculus	1	25	1,699	3,779	IB	IB	6,417	3,779
+3B	PV	Vireo olivaceus	1	25	1,699	1,000	POD	POD	1,699	1,000
+3C	PV	Phyllomyias virescens 	1	25	1,699	1,000	PID	PID	1,699	1,000
+										
+4A	PV	Zonotrichia capensis	3	15	14,154					
+4A	PV	Zonotrichia capensis	4	25	6,794	12,339	GB	GB	20,948	12,339
+4A	PV	Troglodytes musculus	1	15	4,718					
+4A	PV	Troglodytes musculus	1	25	1,699	3,779	IB	IB	6,417	3,779
+4A	PV	Vireo olivaceus	2	25	3,397	2,001	POD	POD	3,397	2,001
+4B	PV	Chlorostilbon lucidus	1	15	4,718	2,779	NI	NI	4,718	2,779
+4C	PV	Phyllomyias virescens 	1	25	1,699	1,000	PID	PID	1,699	1,000
+4C	PV	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR	ITR	1,699	1,000
+										
+1B	PS	Zonotrichia capensis	1	5	42,463					
+1A	PS	Zonotrichia capensis	2	15	9,436					
+1C	PS	Zonotrichia capensis	1	25	1,699	31,569	GB	GB	58,316	34,348
+1C	PS	Saltator similis	1	15	4,718					
+1A	PS	Saltator similis	1	25	1,699	3,779	OB	OB	24,345	14,339
+1A	PS	Vireo olivaceus	1	25	1,699	1,000	POD	POD	11,512	6,781
+1A	PS	Cyanocompsa brissonii	1	15	4,718	2,779	GB			
+1A	PS	Poecilotriccus plumbeiceps	1	15	4,718	2,779	FSAF	FSAF	140,599	82,813
+1A	PS	Sittasomus griseicapillus	3	25	5,096	3,001	ITR	ITR	5,096	3,001
+1A	PS	Turdus amaurochalinus	1	25	1,699	1,000	OB			
+1A	PS	Synallaxis spixi	1	25	1,699	1,000	IB	IB	3,397	2,001
+1B	PS	Basileuterus culicivorus	2	5	84,926					
+1B	PS	Basileuterus culicivorus	1	25	1,699	51,022	FSAF			
+1B	PS	Basileuterus leucoblepharus	1	5	42,463					
+1B	PS	Basileuterus leucoblepharus	3	15	14,154					
+1C	PS	Basileuterus leucoblepharus	1	25	1,699	34,348	FSGAF	FSGAF	58,316	34,348
+1B	PS	Poospiza lateralis	2	15	9,436					
+1B	PS	Poospiza lateralis	3	25	5,096	8,559	OB			
+1B	PS	Pyrrhocoma ruficeps 	4	15	18,872					
+1B	PS	Pyrrhocoma ruficeps 	1	25	1,699	12,116	FSAF			
+1B	PS	Platyrinchus mystaceus 	3	15	14,154	8,337	FSAF			
+1B	PS	Synallaxis cinerascens	1	25	1,699	1,000	FSAF			
+1B	PS	Pipraeidea melanonota	1	15	4,718					
+1B	PS	Pipraeidea melanonota	2	25	3,397	4,780	POD			
+1B	PS	Turdus amaurochalinus	1	25	1,699	1,000	OB			
+1B	PS	Synallaxis ruficapilla	2	15	9,436					
+1C	PS	Synallaxis ruficapilla	1	25	1,699	6,558	FSAF			
+1B	PS	Cyclarhis gujanensis	1	25	1,699	1,000	PID	PID	1,699	1,000
+1C	PS	Myiophobus fasciatus	1	25	1,699	1,000	IB			
+1C	PS	Tangara preciosa	1	25	1,699	1,000	POD			
+1C	PS	Thamnophilus caerulescens	1	25	1,699	1,000	FSAF			
+										
+2A	PS	Zonotrichia capensis	2	5	84,926					
+2A	PS	Zonotrichia capensis	4	15	18,872					
+2B	PS	Zonotrichia capensis	2	25	3,397	63,138	GB	GB	107,195	63,138
+2A	PS	Veniliornis spilogaster	1	25	1,699	1,000	ITR	ITR	5,096	3,001
+2A	PS	Cyclarhis gujanensis	3	25	5,096	3,001	PID	PID	16,230	9,560
+2A	PS	Basileuterus culicivorus	7	25	11,890	7,003	FSAF	FSAF	71,904	42,351
+2A	PS	Lathrotriccus euleri	1	15	4,718					
+2C	PS	Lathrotriccus euleri	1	25	1,699	3,779	FSAF			
+2A	PS	Poospiza lateralis	3	15	14,154	8,337	OB	OB	25,289	14,895
+2C	PS	Phyllomyias virescens 	2	15	9,436					
+2A	PS	Phyllomyias virescens 	1	25	1,699	6,558	PID			
+2A	PS	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR			
+2A	PS	Pyrrhocoma ruficeps 	1	15	4,718	2,779	FSAF			
+2A	PS	Cacicus chrysopterus 	1	25	1,699	1,000	POD	POD	3,397	2,001
+2A	PS	Hylophilus poicilotis	2	25	3,397	2,001	IB	IB	3,397	2,001
+2A	PS	Turdus rufiventris	1	15	4,718	2,779	OB			
+2B	PS	Platyrinchus mystaceus 	1	5	42,463	25,011	FSAF			
+2B	PS	Vireo olivaceus	1	25	1,699	1,000	POD			
+2C	PS	Turdus amaurochalinus	1	15	4,718					
+2B	PS	Turdus amaurochalinus	1	25	1,699	3,779	OB			
+2B	PS	Schiffornis virescens	1	25	1,699	1,000	POS	POS	9,814	5,780
+2B	PS	Sittasomus griseicapillus	1	25	1,699	1,000	ITR			
+2B	PS	Basileuterus leucoblepharus	1	25	1,699	1,000	FSGAS	FSGAS	1,699	1,000
+2C	PS	Phylloscartes ventralis	2	25	3,397	2,001	MI	MI	3,397	2,001
+2C	PS	Turdus albicollis	1	15	4,718					
+2C	PS	Turdus albicollis	2	25	3,397	4,780	POS			
+2C	PS	Thamnophilus caerulescens	1	15	4,718	2,779	FSAF			
+2C	PS	Syndactyla rufosuperciliata	1	25	1,699	1,000	FSAF			
+										
+3A	PS	Poospiza lateralis	3	15	14,154					
+3B	PS	Poospiza lateralis	3	25	5,096	11,338	OB	OB	20,948	12,339
+3A	PS	Basileuterus culicivorus	3	5	127,389					
+3B	PS	Basileuterus culicivorus	1	15	4,718					
+3B	PS	Basileuterus culicivorus	1	25	1,699	78,811	FSAF	FSAF	237,981	140,171
+3A	PS	Phylloscartes ventralis	1	5	42,463					
+3B	PS	Phylloscartes ventralis	1	15	4,718	27,790	MI	MI	47,181	27,790
+3A	PS	Pyrrhocoma ruficeps 	1	5	42,463					
+3A	PS	Pyrrhocoma ruficeps 	2	15	9,436	30,569	FSAF			
+3A	PS	Phyllomyias virescens 	4	25	6,794	4,002	PID	PID	11,890	7,003
+3A	PS	Synallaxis ruficapilla	1	5	42,463					
+3A	PS	Synallaxis ruficapilla	1	15	4,718					
+3C	PS	Synallaxis ruficapilla	1	25	1,699	28,790	FSAF			
+3A	PS	Saltator similis	1	25	1,699	1,000	OB			
+3B	PS	Myiophobus fasciatus	1	5	42,463					
+3A	PS	Myiophobus fasciatus	1	15	4,718	27,790	IB	IB	50,578	29,790
+3A	PS	Heliobletus contaminatus	2	25	3,397	2,001	ITR	ITR	9,814	5,780
+3A	PS	Basileuterus leucoblepharus	3	15	14,154					
+3A	PS	Basileuterus leucoblepharus	1	25	1,699	9,337	FSGAS	FSGAS	15,853	9,337
+3A	PS	Synallaxis cinerascens	1	25	1,699	1,000	FSAF			
+3A	PS	Zonotrichia capensis	5	15	23,590					
+3B	PS	Zonotrichia capensis	3	25	5,096	16,896	GB	GB	28,686	16,896
+3A	PS	Leucochloris albicollis	1	25	1,699	1,000	NI	NI	1,699	1,000
+3B	PS	Cyclarhis gujanensis	2	25	3,397	2,001	PID			
+3B	PS	Vireo olivaceus	1	25	1,699	1,000	POD	POD	5,096	3,001
+3C	PS	Lathrotriccus euleri	1	25	1,699	1,000	FSAF			
+3C	PS	Turdus albicollis	1	15	4,718					
+3C	PS	Turdus albicollis	1	25	1,699	3,779	POS	POS	6,417	3,779
+3C	PS	Hylophilus poicilotis	2	25	3,397	2,001	IB			
+3C	PS	Lepidocolaptes falcinellus	1	15	4,718					
+3C	PS	Lepidocolaptes falcinellus	1	25	1,699	3,779	ITR			
+3C	PS	Parula pitiayumi	1	25	1,699	1,000	PID			
+3C	PS	Stephanophorus diadematus	2	25	3,397	2,001	POD			
+										
+4A	PS	Contopus cinereus	2	25	3,397	2,001	MI	MI	20,948	12,339
+4A	PS	Basileuterus culicivorus	4	25	6,794	4,002	FSAF	FSAF	15,287	9,004
+4A	PS	Basileuterus leucoblepharus	1	15	4,718					
+4C	PS	Basileuterus leucoblepharus	1	25	1,699	3,779	FSGAF	FSGAF	6,417	3,779
+4A	PS	Vireo olivaceus	2	25	3,397	2,001	POD	POD	10,191	6,003
+4A	PS	Lathrotriccus euleri	1	25	1,699	1,000	FSAF			
+4A	PS	Syndactyla rufosuperciliata	1	25	1,699	1,000	FSAF			
+4A	PS	Zonotrichia capensis	2	25	3,397	2,001	GB	GB	5,096	3,001
+4A	PS	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF			
+4A	PS	Drymophila malura	1	25	1,699	1,000	FSAF			
+4A	PS	Phylloscartes ventralis	1	15	4,718					
+4C	PS	Phylloscartes ventralis	2	25	3,397	4,780	MI			
+4A	PS	Pipraeidea melanonota	3	25	5,096	3,001	POD			
+4A	PS	Cranioleuca obsoleta	2	15	9,436	5,558	MI			
+4A	PS	Thamnophilus caerulescens	1	25	1,699	1,000	FSAF			
+4A	PS	Phyllomyias virescens 	1	25	1,699	1,000	PID	PID	1,699	1,000
+4B	PS	Tangara preciosa	1	25	1,699	1,000	POD			
+4B	PS	Myiophobus fasciatus	1	15	4,718					
+4C	PS	Myiophobus fasciatus	1	25	1,699	3,779	IB	IB	9,814	5,78
+4B	PS	Troglodytes musculus	2	25	3,397	2,001	IB			
+4B	PS	Turdus rufiventris	1	15	4,718	2,779	OB	OB	14,532	8,559
+4B	PS	Turdus amaurochalinus	1	25	1,699	1,000	OB			
+4B	PS	Cyanocompsa brissonii	1	25	1,699	1,000	GB			
+4B	PS	Saltator sp.	1	15	4,718	2,779	OB			
+4B	PS	Poospiza lateralis	2	25	3,397	2,001	OB			
+4B	PS	Sittasomus griseicapillus	2	25	3,397	2,001	ITR	ITR	3,397	2,001
+										
+1A	AP	Leptasthenura setaria	3	15	14,154					
+1B	AP	Leptasthenura setaria	3	25	5,096	11,338	PID	PID	43,595	25,678
+1C	AP	Myiarchus swainsoni	1	15	4,718					
+1A	AP	Myiarchus swainsoni	2	25	3,397	4,780	PID			
+1A	AP	Lathrotriccus euleri	1	25	1,699	1,000	FSAF	FSAF	10,191	6,003
+1B	AP	Trogon surrucura	1	15	4,718					
+1A	AP	Trogon surrucura	2	25	3,397	4,780	FFI	FFI	8,115	4,780
+1A	AP	Thamnophilus caerulescens	1	25	1,699	1,000	FSAF			
+1A	AP	Parula pitiayumi	2	15	9,436	5,558	PID			
+1A	AP	Cyclarhis gujanensis	3	25	5,096	3,001	PID			
+1B	AP	Schiffornis virescens	1	25	1,699	1,000	POS	POS	1,699	1,000
+1B	AP	Camptostoma obsoletum	1	25	1,699	1,000	POD	POD	14,532	8,559
+1B	AP	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF			
+1B	AP	Synallaxis cinerascens	1	25	1,699	1,000	FSAF			
+1C	AP	Heliobletus contaminatus	1	15	4,718	2,779	ITR	ITR	12,833	7,559
+1C	AP	Myiodynastes maculatus	1	25	1,699	1,000	OB	OB	1,699	1,000
+1C	AP	Hemithraupis guira	1	15	4,718					
+1C	AP	Hemithraupis guira	2	25	3,397	4,780	POD			
+1C	AP	Pachyramphus castaneus	1	15	4,718	2,779	MI	MI	51,899	30,569
+1C	AP	Vireo olivaceus	1	15	4,718	2,779	POD			
+1C	AP	Sittasomus griseicapillus	1	15	4,718					
+1C	AP	Sittasomus griseicapillus	1	25	1,699	3,779	ITR			
+1C	AP	Phylloscartes ventralis	1	5	42,463					
+1C	AP	Phylloscartes ventralis	1	15	4,718	27,790	MI			
+1C	AP	Pyrrhocoma ruficeps 	1	25	1,699	1,000	FSAF			
+1C	AP	Basileuterus culicivorus	1	25	1,699	1,000	FSAF			
+1C	AP	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR			
+1C	AP	Phyllomyias virescens 	1	25	1,699	1,000	PID			
+										
+2A	AP	Turdus albicollis	2	25	3,397	2,001	POS	POS	3,397	2,001
+2A	AP	Poospiza lateralis	2	15	9,436					
+2A	AP	Poospiza lateralis	1	25	1,699	6,558	OB	OB	11,135	6,558
+2A	AP	Ramphastos dicolorus	1	25	1,699	1,000	FF	FF	1,699	1,000
+2A	AP	Phyllomyias virescens 	4	25	6,794	4,002	PID	PID	27,742	16,340
+2A	AP	Leptasthenura setaria	3	15	14,154	8,337	PID			
+2B	AP	Phylloscartes ventralis	1	15	4,718					
+2A	AP	Phylloscartes ventralis	1	25	1,699	3,779	MI	MI	12,833	7,559
+2A	AP	Parula pitiayumi	2	25	3,397	2,001	PID			
+2A	AP	Syndactyla rufosuperciliata	2	25	3,397	2,001	FSAF	FSAF	24,345	14,339
+2A	AP	Vireo olivaceus	2	25	3,397	2,001	POD	POD	5,096	3,001
+2A	AP	Cyclarhis gujanensis	1	25	1,699	1,000	PID			
+2A	AP	Basileuterus leucoblepharus	1	25	1,699	1,000	FSGAF	FSGAF	1,699	1,000
+2B	AP	Cranioleuca obsoleta	1	15	4,718					
+2B	AP	Cranioleuca obsoleta	1	25	1,699	3,779	MI			
+2B	AP	Lathrotriccus euleri	1	15	4,718					
+2C	AP	Lathrotriccus euleri	1	25	1,699	3,779	FSAF			
+2B	AP	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR	ITR	3,397	2,001
+2B	AP	Synallaxis cinerascens	1	15	4,718	2,779	FSAF			
+2B	AP	Phyllomyias fasciatus	1	25	1,699	1,000	PID			
+2B	AP	Sittasomus griseicapillus	1	25	1,699	1,000	ITR			
+2C	AP	Hemitriccus obsoletus	1	15	4,718	2,779	FSAF			
+2C	AP	Hylophilus poicilotis	1	25	1,699	1,000	IB	IB	1,699	1,000
+2C	AP	Stephanophorus diadematus	1	25	1,699	1,000	POD			
+2C	AP	Zonotrichia capensis	1	15	4,718					
+2C	AP	Zonotrichia capensis	1	25	1,699	3,779	GB	GB	6,417	3,779
+2C	AP	Basileuterus culicivorus	2	25	3,397	2,001	FSAF			
+2C	AP	Pyrrhocoma ruficeps 	1	25	1,699	1,000	FSAF			
+										
+3A	AP	Phyllomyias virescens 	1	15	4,718					
+3C	AP	Phyllomyias virescens 	1	25	1,699	3,779	PID	PID	38,122	22,454
+3A	AP	Phyllomyias fasciatus	1	25	1,699	1,000	PID			
+3A	AP	Phylloscartes ventralis	5	15	23,590					
+3A	AP	Phylloscartes ventralis	1	25	1,699	14,895	MI	MI	25,289	14,895
+3A	AP	Parula pitiayumi	1	15	4,718					
+3B	AP	Parula pitiayumi	1	25	1,699	3,779	PID			
+3A	AP	Vireo olivaceus	1	25	1,699	1,000	POD	POD	6,794	4,002
+3A	AP	Saltator maxillosus	2	15	9,436	5,558	OB	OB	11,135	6,558
+3A	AP	Lathrotriccus euleri	3	15	14,154					
+3B	AP	Lathrotriccus euleri	1	25	1,699	9,337	FSAF	FSAF	29,063	17,118
+3A	AP	Myiopagis caniceps	2	15	9,436	5,558	PID			
+3A	AP	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF			
+3A	AP	Myiophobus fasciatus	1	15	4,718	2,779	IB	IB	4,718	2,779
+3B	AP	Thamnophilus caerulescens	1	15	4,718					
+3A	AP	Thamnophilus caerulescens	2	25	3,397	4,780	FSAF			
+3A	AP	Cyanocorax chrysops	2	15	9,436					
+3A	AP	Cyanocorax chrysops	4	25	6,794	9,560	FFI	FFI	16,230	9,560
+3A	AP	Basileuterus leucoblepharus	1	15	4,718					
+3B	AP	Basileuterus leucoblepharus	1	25	1,699	3,779	FSGAF	FSGAF	6,417	3,779
+3B	AP	Tangara preciosa	2	25	3,397	2,001	POD			
+3B	AP	Leptasthenura setaria	2	15	9,436	5,558	PID			
+3B	AP	Turdus albicollis	1	25	1,699	1,000	POS	POS	1,699	1,000
+3B	AP	Heliobletus contaminatus	2	25	3,397	2,001	ITR	ITR	11,890	7,003
+3B	AP	Basileuterus culicivorus	2	25	3,397	2,001	FSAF			
+3B	AP	Myiarchus swainsoni	1	15	4,718	2,779	PID			
+3B	AP	Picidae NI	1	25	1,699	1,000	ITR			
+3B	AP	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR			
+3B	AP	Sittasomus griseicapillus	2	25	3,397	2,001	ITR			
+3C	AP	Pipraeidea melanonota	1	25	1,699	1,000	POD			
+3C	AP	Turdus rufiventris	1	25	1,699	1,000	OB			
+3C	AP	Dendrocolaptes platyrostris	1	25	1,699	1,000	ITRS	ITRS	1,699	1,000
+3C	AP	Xiphorhynchus fuscus	1	25	1,699	1,000	ITR			
+										
+4A	AP	Cacicus chrysopterus 	1	25	1,699	1,000	POD	POD	9,814	5,780
+4A	AP	Vireo olivaceus	1	15	4,718					
+4A	AP	Vireo olivaceus	2	25	3,397	4,780	POD			
+4A	AP	Phyllomyias fasciatus	1	25	1,699	1,000	PID	PID	9,814	5,780
+4A	AP	Sittasomus griseicapillus	3	25	5,096	3,001	ITR	ITR	6,794	4,002
+4A	AP	Phylloscartes ventralis	2	15	9,436					
+4A	AP	Phylloscartes ventralis	3	25	5,096	8,559	MI	MI	14,532	8,559
+4A	AP	Lathrotriccus euleri	2	25	3,397	2,001	FSAF	FSAF	8,115	4,780
+4B	AP	Parula pitiayumi	1	15	4,718					
+4A	AP	Parula pitiayumi	2	25	3,397	4,780	PID			
+4B	AP	Hemitriccus obsoletus	1	15	4,718	2,779	FSAF			
+4C	AP	Chamaeza campanisona	1	25	1,699	1,000	FSGAS	FSGAS	1,699	1,000
+4C	AP	Piculus aurulentus	1	25	1,699	1,000	ITR			
+4C	AP	Schiffornis virescens	1	25	1,699	1,000	POS	POS	8,115	4,780
+4C	AP	Turdus albicollis	1	15	4,718					
+4C	AP	Turdus albicollis	1	25	1,699	3,779	POS			
+										
+1A	MN	Sittasomus griseicapillus	2	25	3,397	2,001	ITR	ITR	6,794	4,002
+1A	MN	Leucochloris albicollis	2	15	9,436	5,558	NI	NI	9,436	5,558
+1A	MN	Phylloscartes ventralis	3	15	14,154					
+1B	MN	Phylloscartes ventralis	2	25	3,397	10,338	MI	MI	19,250	11,338
+1A	MN	Parula pitiayumi	1	15	4,718					
+1C	MN	Parula pitiayumi	2	25	3,397	4,780	PID	PID	16,230	9,560
+1A	MN	Basileuterus culicivorus	2	15	9,436					
+1A	MN	Basileuterus culicivorus	2	25	3,397	7,559	FSAF	FSAF	68,129	40,128
+1A	MN	Scytalopus notorius	1	25	1,699	1,000	FSAF			
+1A	MN	Stephanophorus diadematus	1	25	1,699	1,000	POD	POD	8,493	5,002
+1A	MN	Trogon surrucura	1	25	1,699	1,000	FFI	FFI	1,699	1,000
+1A	MN	Cyclarhis gujanensis	1	25	1,699	1,000	PID			
+1A	MN	Tolmomyias sulphurescens	1	25	1,699	1,000	MI			
+1A	MN	Dysithamnus mentalis	1	5	42,463					
+1A	MN	Dysithamnus mentalis	1	15	4,718	27,790	FSAF			
+1B	MN	Heliobletus contaminatus	2	25	3,397	2,001	ITR			
+1B	MN	Lathrotriccus euleri	1	15	4,718					
+1C	MN	Lathrotriccus euleri	1	25	1,699	3,779	FSAF			
+1B	MN	Vireo olivaceus	2	25	3,397	2,001	POD			
+1B	MN	Basileuterus leucoblepharus	1	15	4,718					
+1B	MN	Basileuterus leucoblepharus	2	25	3,397	4,780	FSGAF	FSGAF	9,814	5,780
+1B	MN	Chamaeza campanisona	1	25	1,699	1,000	FSGAF			
+1B	MN	Cacicus chrysopterus 	2	25	3,397	2,001	POD			
+1B	MN	Schiffornis virescens	1	15	4,718					
+1C	MN	Schiffornis virescens	1	25	1,699	3,779	POS	POS	8,115	4,780
+1C	MN	Phyllomyias virescens 	1	25	1,699	1,000	PID			
+1C	MN	Turdus albicollis	1	25	1,699	1,000	POS			
+1C	MN	Phyllomyias fasciatus	1	15	4,718	2,779	PID			
+										
+2A	MN	Trogon rufus	1	15	4,718	2,779	FFI	FFI	11,135	6,558
+2A	MN	Hemitriccus obsoletus	2	15	9,436					
+2C	MN	Hemitriccus obsoletus	1	25	1,699	6,558	FSAF	FSAF	84,360	49,688
+2A	MN	Camptostoma obsoletum	1	25	1,699	1,000	POD	POD	13,211	7,781
+2A	MN	Tolmomyias sulphurescens	1	25	1,699	1,000	MI	MI	16,230	9,560
+2A	MN	Basileuterus leucoblepharus	2	25	3,397	2,001	FSGAF	FSGAF	3,397	2,001
+2C	MN	Basileuterus culicivorus	1	5	42,463					
+2A	MN	Basileuterus culicivorus	3	15	14,154					
+2A	MN	Basileuterus culicivorus	4	25	6,794	37,349	FSAF			
+2A	MN	Heliobletus contaminatus	3	25	5,096	3,001	ITR	ITR	10,191	6,003
+2A	MN	Parula pitiayumi	1	15	4,718					
+2A	MN	Parula pitiayumi	1	25	1,699	3,779	PID	PID	13,211	7,781
+2A	MN	Lathrotriccus euleri	1	15	4,718					
+2A	MN	Lathrotriccus euleri	1	25	1,699	3,779	FSAF			
+2A	MN	Myiopagis caniceps	1	25	1,699	1,000	PID			
+2A	MN	Hemithraupis guira	2	25	3,397	2,001	POD			
+2C	MN	Turdus rufiventris	1	15	4,718					
+2A	MN	Turdus rufiventris	4	25	6,794	6,781	OB	OB	19,627	11,560
+2A	MN	Cyanocorax chrysops	1	25	1,699	1,000	FFI			
+2A	MN	Pipraeidea melanonota	1	15	4,718	2,779	POD			
+2B	MN	Turdus albicollis	2	15	9,436					
+2C	MN	Turdus albicollis	1	25	1,699	6,558	POS	POS	11,135	6,558
+2B	MN	Xiphorhynchus fuscus	1	25	1,699	1,000	ITR			
+2B	MN	Phylloscartes ventralis	2	15	9,436					
+2C	MN	Phylloscartes ventralis	1	25	1,699	6,558	MI			
+2B	MN	Phyllomyias fasciatus	1	25	1,699	1,000	PID			
+2B	MN	Saltator similis	1	15	4,718	2,779	OB			
+2B	MN	Phyllomyias virescens 	1	25	1,699	1,000	PID			
+2B	MN	Trogon surrucura	1	15	4,718	2,779	FFI			
+2C	MN	Tachyphonus coronatus	1	25	1,699	1,000	OB			
+2C	MN	Cacicus chrysopterus 	1	25	1,699	1,000	POD			
+2C	MN	Piaya cayana	1	25	1,699	1,000	MI			
+2C	MN	Cranioleuca obsoleta	1	25	1,699	1,000	MI			
+2C	MN	Vireo olivaceus	1	25	1,699	1,000	POD			
+2C	MN	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR			
+2C	MN	Cyclarhis gujanensis	1	25	1,699	1,000	PID			
+2C	MN	Sittasomus griseicapillus	1	25	1,699	1,000	ITR			
+2C	MN	Poospiza lateralis	1	25	1,699	1,000	OB			
+2C	MN	Pyrrhocoma ruficeps 	2	25	3,397	2,001	FSAF			
+										
+3A	MN	Xenops rutilans	1	15	4,718	2,779	ITR	ITR	14,532	8,559
+3A	MN	Parula pitiayumi	2	15	9,436					
+3A	MN	Parula pitiayumi	2	25	3,397	7,559	PID	PID	24,345	14,339
+3A	MN	Basileuterus culicivorus	3	15	14,154					
+3A	MN	Basileuterus culicivorus	6	25	10,191	14,339	FSAF	FSAF	73,980	43,574
+3A	MN	Turdus amaurochalinus	1	25	1,699	1,000	OB	OB	14,909	8,782
+3A	MN	Vireo olivaceus	3	25	5,096	3,001	POD	POD	13,211	7,781
+3A	MN	Pipraeidea melanonota	1	15	4,718					
+3A	MN	Pipraeidea melanonota	2	25	3,397	4,780	POD			
+3A	MN	Pachyramphus viridis	1	25	1,699	1,000	PID			
+3A	MN	Turdus rufiventris	1	15	4,718					
+3A	MN	Turdus rufiventris	1	25	1,699	3,779	OB			
+3A	MN	Pyrrhocoma ruficeps 	3	15	14,154					
+3B	MN	Pyrrhocoma ruficeps 	1	25	1,699	9,337	FSAF			
+3C	MN	Cyclarhis gujanensis	1	15	4,718					
+3A	MN	Cyclarhis gujanensis	1	25	1,699	3,779	PID			
+3A	MN	Sittasomus griseicapillus	2	25	3,397	2,001	ITR			
+3A	MN	Lathrotriccus euleri	2	15	9,436	5,558	FSAF			
+3C	MN	Platyrinchus mystaceus 	1	15	4,718					
+3B	MN	Platyrinchus mystaceus 	1	25	1,699	3,779	FSAF			
+3B	MN	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF			
+3B	MN	Trogon surrucura	1	25	1,699	1,000	FFI	FFI	1,699	1,000
+3B	MN	Hylophilus poicilotis	2	25	3,397	2,001	IB	IB	3,397	2,001
+3B	MN	Turdus amaurochalinus	1	25	1,699	1,000	OB			
+3B	MN	Xiphorhynchus fuscus	1	15	4,718	2,779	ITR			
+3B	MN	Heliobletus contaminatus	1	25	1,699	1,000	ITR			
+3B	MN	Dysithamnus mentalis	3	25	5,096	3,001	FSAF			
+3B	MN	Thamnophilus caerulescens	1	25	1,699	1,000	FSAF			
+3C	MN	Hylopezus nattereri	1	15	4,718	2,779	FSAF			
+3C	MN	Syndactyla rufosuperciliata	1	15	4,718	2,779	FSAF			
+3C	MN	Basileuterus leucoblepharus	1	15	4,718	2,779	FSGAF	FSGAF	4,718	2,779
+3C	MN	Phyllomyias burmeisteri	1	25	1,699	1,000	PID			
+3C	MN	Saltator sp.	2	25	3,397	2,001	OB			
+3C	MN	Turdus rufiventris	1	25	1,699	1,000	OB			
+3C	MN	Schiffornis virescens	1	15	4,718	2,779	POS	POS	4,718	2,779
+3C	MN	Phyllomyias fasciatus	1	25	1,699	1,000	PID			
+										
+4A	MN	Phyllomyias virescens 	2	25	3,397	2,001	PID	PID	8,493	5,002
+4A	MN	Parula pitiayumi	2	25	3,397	2,001	PID			
+4A	MN	Veniliornis spilogaster	2	25	3,397	2,001	ITR	ITR	10,191	6,003
+4A	MN	Hemithraupis guira	5	25	8,493	5,002	POD	POD	22,081	13,006
+4A	MN	Leptopogon amaurocephalus	1	15	4,718	2,779	FSAF	FSAF	29,063	17,118
+4A	MN	Heliobletus contaminatus	2	25	3,397	2,001	ITR			
+4A	MN	Tangara preciosa	3	25	5,096	3,001	POD			
+4C	MN	Phylloscartes ventralis	1	15	4,718					
+4A	MN	Phylloscartes ventralis	5	25	8,493	7,781	MI	MI	14,909	8,782
+4A	MN	Camptostoma obsoletum	1	25	1,699	1,000	POD			
+4A	MN	Pipraeidea melanonota	1	25	1,699	1,000	POD			
+4A	MN	Picumnus nebulosus	1	25	1,699	1,000	ITR			
+4A	MN	Turdus albicollis	2	15	9,436					
+4C	MN	Turdus albicollis	1	25	1,699	6,558	POS	POS	15,853	9,337
+4A	MN	Sittasomus griseicapillus	2	25	1,699	1,000	ITR			
+4A	MN	Chiroxiphia caudata	1	15	4,718	2,779	POS			
+4A	MN	Basileuterus culicivorus	4	25	6,794	4,002	FSAF			
+4B	MN	Basileuterus leucoblepharus	1	15	4,718					
+4C	MN	Basileuterus leucoblepharus	2	25	3,397	4,780	FSGAF	FSGAF	8,115	4,780
+4B	MN	Poecilotriccus plumbeiceps	1	15	4,718	2,779	FSAF			
+4B	MN	Vireo olivaceus	2	25	3,397	2,001	POD			
+4B	MN	Dysithamnus mentalis	1	25	1,699	1,000	FSAF			
+4B	MN	Drymophila malura	1	25	1,699	1,000	FSAF			
+4C	MN	Trogon surrucura	2	25	3,397	2,001	FFI	FFI	3,397	2,001
+4C	MN	Pachyramphus castaneus	1	25	1,699	1,000	MI			
+4C	MN	Lathrotriccus euleri	1	15	4,718	2,779	FSAF			
+4C	MN	Cyclarhis gujanensis	1	25	1,699	1,000	PID			
+4C	MN	Conopophaga lineata	1	15	4,718	2,779	FSAF			
+4C	MN	Euphonia chalybea	1	25	1,699	1,000	POD			
+										
+2009	2009	2009	2009	2009	2009	2009	2009	2009	2009	2009
+										
+1AA	PM	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR	1,699	1,000	
+1BB	PM	Zonotrichia capensis	3	25	5,096	3,001	GB	5,096	3,001	
+1BB	PM	Troglodytes musculus	1	25	1,699	1,000	IB	1,699	1,000	
+1CC	PM	Vireo olivaceus	1	25	1,699	1,000	POD	1,699	1,000	
+										
+2AA	PM	Milvago chimachima	1	25	1,699	1,000	CD	1,699	1,000	
+2AA	PM	Zonotrichia capensis	2	25	3,397	2,001	GB	3,397	2,001	
+										
+3BB	PM	Cacicus chrysopterus	1	25	1,699	1,000	POD	POD	1,699	1,000
+3CC	PM	Lathrtriccus euleri	1	25	1,699	1,000	FSAF	FSAF	3,397	2,001
+3BB	PM	Thamnophilus caerulescens	1	25	1,699	1,000	FSAF			
+3AA	PM	Zonotrichia capensis	4	25	6,794	4,002	GB	GB	6,794	4,002
+										
+4AA	PM	Zonotrichia capensis	1	25	1,699	1,000	GB	GB	1,699	1,000
+4BB	PM	Parula pitiayumi	1	25	1,699	1,000	PID	PID	1,699	1,000
+										
+1BB	PV	Zonotrichia capensis	1	15	4,718					
+1AA	PV	Zonotrichia capensis	6	25	10,191	8,782	GB	GB	14,909	8,782
+1BB	PV	Phylloscartes ventralis	1	25	1,699	1,000	MI	MI	1,699	1,000
+1BB	PV	Troglodytes musculus	1	25	1,699	1,000	IB	IB	1,699	1,000
+1CC	PV	Thraupis sayaca	1	25	1,699	1,000	OB	OB	1,699	1,000
+										
+2AA	PV	Phylloscartes ventralis	1	25	1,699	1,000	MI	MI	1,699	1,000
+2BB	PV	Zonotrichia capensis	2	15	9,436					
+2BB	PV	Zonotrichia capensis	3	25	5,096	8,559	GB	GB	14,532	8,559
+2BB	PV	Turdus amaurochalinus	1	25	1,699	1,000	OB	OB	1,699	1,000
+										
+3AA	PV	Zonotrichia capensis	5	25	8,493	5,002	GB	GB	8,493	5,002
+3BB	PV	Turdus amaurochalinus	2	25	3,397	2,001	OB	OB	3,397	2,001
+										
+4AA	PV	Zonotrichia capensis	7	25	11,890	7,003	GB	GB	11,890	7,003
+4BB	PV	Troglodytes musculus	1	15	4,718					
+4CC	PV	Troglodytes musculus	1	25	1,699	3,779	IB	IB	6,417	3,779
+4CC	PV	Vireo olivaceus	1	25	1,699	1,000	POD	POD	1,699	1,000
+										
+1AA	PS	Zonotrichia capensis	4	15	18,872					
+1AA	PS	Zonotrichia capensis	3	25	5,096	14,117	GB	GB	28,686	16,896
+1AA	PS	Poospiza cabanisi	4	25	6,794	4,002	OB	OB	6,794	4,002
+1AA	PS	Myiophobus fasciatus	2	25	3,397	2,001	IB	IB	6,794	4,002
+1AA	PS	Troglodytes musculus	1	25	1,699	1,000	IB			
+1AA	PS	Cyanocompsa brissonii	1	15	4,718	2,779	GB			
+1AA	PS	Basileuterus culicivorus	3	25	5,096	3,001	FSAF	FSAF	57,372	33,792
+1AA	PS	Synallaxis spixi	1	25	1,699	1,000	IB			
+1AA	PS	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR	ITR	5,096	3,001
+1BB	PS	Pipraeidea melanonota	1	25	1,699	1,000	POD	POD	1,699	1,000
+1BB	PS	Picumnus nebulosus	1	25	1,699	1,000	ITR			
+1BB	PS	Poecilotriccus plumbeiceps	1	25	1,699	1,000	FSAF			
+1CC	PS	Synallaxis ruficapilla	1	5	42,463					
+1CC	PS	Synallaxis ruficapilla	1	15	4,718	27,790	FSAF			
+1CC	PS	Sittasomus griseicapillus	1	25	1,699	1,000	ITR			
+1CC	PS	Pyrrhocoma ruficeps 	2	25	3,397	2,001	FSAF			
+1CC	PS	Schiffornis virescens	1	25	1,699	1,000	POS	POS	1,699	1,000
+										
+2AA	PS	Poospiza cabanisi	1	15	4,718	2,779	OB	OB	8,115	4,780
+2AA	PS	Heliobletus contaminatus	1	25	1,699	1,000	ITR	ITR	8,493	5,002
+2AA	PS	Turdus albicollis	1	25	1,699	1,000	POS	POS	6,794	4,002
+2CC	PS	Basileuterus culicivorus	2	15	9,436					
+2AA	PS	Basileuterus culicivorus	3	25	5,096	8,559	FSAF	FSAF	19,627	11,560
+2AA	PS	Syndactyla rufosuperciliata	2	25	3,397	2,001	FSAF			
+2AA	PS	Phyllomyias virescens 	1	25	1,699	1,000	PID	PID	1,699	1,000
+2AA	PS	Vireo olivaceus	2	25	3,397	2,001	POD	POD	5,096	3,001
+2BB	PS	Schiffornis virescens	1	25	1,699	1,000	POS			
+2BB	PS	Sittasomus griseicapillus	2	25	3,397	2,001	ITR			
+2BB	PS	Phylloscartes ventralis	1	15	4,718					
+2BB	PS	Phylloscartes ventralis	1	25	1,699	3,779	MI	MI	6,417	3,779
+2CC	PS	Turdus albicollis	2	25	3,397	2,001	POS			
+2CC	PS	Turdus rufiventris	1	25	1,699	1,000	OB			
+2CC	PS	Stephanophorus diadematus	1	25	1,699	1,000	POD			
+2CC	PS	Picumnus nebulosus	1	25	1,699	1,000	ITR			
+2CC	PS	Leucochloris albicollis	1	15	4,718	2,779	NI	NI	4,718	2,779
+2CC	PS	Basileuterus leucoblepharus	1	15	4,718					
+2CC	PS	Basileuterus leucoblepharus	1	25	1,699	3,779	FSGAS	FSGAS	6,417	3,779
+2CC	PS	Saltator sp.	1	25	1,699	1,000	OB			
+2CC	PS	Myiophobus fasciatus	1	25	1,699	1,000	IB	IB	1,699	1,000
+2CC	PS	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF			
+2CC	PS	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR			
+2CC	PS	Zonotrichia capensis	1	25	1,699	1,000	GB	GB	1,699	1,000
+										
+3AA	PS	Zonotrichia capensis	2	15	9,436					
+3AA	PS	Zonotrichia capensis	3	25	5,096	8,559	GB	GB	14,532	8,559
+3AA	PS	Basileuterus leucoblepharus	3	25	5,096	3,001	FSGAS	FSGAS	5,096	3,001
+3AA	PS	Phylloscartes ventralis	1	25	1,699	1,000	MI	MI	1,699	1,000
+3AA	PS	Basileuterus culicivorus	3	25	5,096	3,001	FSAF	FSAF	16,608	9,782
+3BB	PS	Platyrinchus mystaceus 	1	25	1,699	1,000	FSAF			
+3BB	PS	Poospiza cabanisi	1	15	4,718					
+3CC	PS	Poospiza cabanisi	1	25	1,699	3,779	OB	OB	8,115	4,780
+3BB	PS	Lathrotriccus euleri	2	25	3,397	2,001	FSAF			
+3BB	PS	Leucochloris albicollis	1	25	1,699	1,000	NI	NI	1,699	1,000
+3BB	PS	Vireo olivaceus	1	25	1,699	1,000	POD	POD	5,096	3,001
+3CC	PS	Synallaxis ruficapilla	1	15	4,718					
+3CC	PS	Synallaxis ruficapilla	1	25	1,699	3,779	FSAF			
+3CC	PS	Turdus amaurochalinus	1	25	1,699	1,000	OB			
+3CC	PS	Pipraeidea melanonota	2	25	3,397	2,001	POD			
+3CC	PS	Hylophilus poicilotis	1	25	1,699	1,000	IB	IB	1,699	1,000
+3CC	PS	Heliobletus contaminatus	1	25	1,699	1,000	ITR	ITR	1,699	1,000
+3CC	PS	Cyclarhis gujanensis	1	25	1,699	1,000	PID	PID	1,699	1,000
+										
+4AA	PS	Basileuterus culicivorus	2	15	9,436	5,558	FSAF	FSAF	23,968	14,117
+4AA	PS	Cyanocompsa brissonii	1	15	4,718	2,779	GB	GB	11,135	6,558
+4AA	PS	Cranioleuca obsoleta	1	15	4,718	2,779	MI	MI	6,417	3,779
+4AA	PS	Thamnophilus caerulescens	1	15	4,718					
+4AA	PS	Thamnophilus caerulescens	1	25	1,699	3,779	FSAF			
+4AA	PS	Basileuterus leucoblepharus	1	5	42,463					
+4AA	PS	Basileuterus leucoblepharus	1	15	4,718					
+4BB	PS	Basileuterus leucoblepharus	2	25	3,397	29,790	FSGAS	FSGAS	50,578	29,79
+4AA	PS	Veniliornis spilogaster	1	25	1,699	1,000	ITR	ITR	5,096	3,001
+4AA	PS	Phylloscartes ventralis	1	25	1,699	1,000	MI			
+4AA	PS	Saltator maxillosus	1	15	4,718					
+4AA	PS	Saltator maxillosus	1	25	1,699	3,779	OB	OB	13,211	7,781
+4AA	PS	Platyrinchus mystaceus 	1	25	1,699	1,000	FSAF			
+4AA	PS	Poospiza cabanisi	3	25	5,096	3,001	OB			
+4AA	PS	Turdus rufiventris	1	25	1,699	1,000	OB			
+4AA	PS	Sittasomus griseicapillus	1	25	1,699	1,000	ITR			
+4AA	PS	Picumnus nebulosus	1	25	1,699	1,000	ITR			
+4BB	PS	Zonotrichia capensis	1	15	4,718					
+4AA	PS	Zonotrichia capensis	1	25	1,699	3,779	GB			
+4BB	PS	Poecilotriccus plumbeiceps	1	15	4,718					
+4BB	PS	Poecilotriccus plumbeiceps	1	25	1,699	3,779	FSAF			
+4CC	PS	Stephanohporus diadematus	1	25	1,699	1,000				
+4CC	PS	Lathrotriccus euleri	1	25	1,699	1,000				
+										
+1AA	AP	Cranioleuca obsoleta	1	25	1,699	1,000	MI	MI	8,115	4,780
+1AA	AP	Sittasomus griseicapillus	2	15	9,436					
+1CC	AP	Sittasomus griseicapillus	1	25	1,699	6,558	ITR	ITR	25,289	14,895
+1AA	AP	Camptostoma obsoletum	1	15	4,718					
+1AA	AP	Camptostoma obsoletum	1	25	1,699	3,779	POD	POD	20,571	12,116
+1AA	AP	Heliobletus contaminatus	3	15	14,154	8,337	ITR			
+1AA	AP	Zonotrichia capensis	1	15	4,718					
+1AA	AP	Zonotrichia capensis	1	25	1,699	3,779	GB	GB	6,417	3,779
+1AA	AP	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF	FSAF	5,096	3,001
+1CC	AP	Leptasthenura setaria	1	15	4,718					
+1AA	AP	Leptasthenura setaria	2	25	3,397	4,780	PID	PID	12,833	7,559
+1AA	AP	Turdus albicollis	1	25	1,699	1,000	POS	POS	3,397	2,001
+1BB	AP	Platyrinchus mystaceus 	1	25	1,699	1,000	FSAF			
+1BB	AP	Schiffornis virescens	1	25	1,699	1,000	POS			
+1BB	AP	Parula pitiayumi	1	15	4,718	2,779	PID			
+1BB	AP	Turdus rufiventris	1	25	1,699	1,000	OB	OB	1,699	1,000
+1CC	AP	Hemithraupis guira	3	15	14,154	8,337	POD			
+1CC	AP	Pachyramphus castaneus	1	15	4,718	2,779	MI			
+1CC	AP	Phylloscartes ventralis	1	25	1,699	1,000	MI			
+1CC	AP	Basileuterus culicivorus	1	25	1,699	1,000	FSAF			
+										
+2AA	AP	Drymophila malura	1	15	4,718	2,779	FSAF	FSAF	37,179	21,898
+2AA	AP	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF			
+2AA	AP	Conopophaga lineata	1	15	4,718	2,779	FSAF			
+2AA	AP	Pachyramphus polychopterus	2	25	3,397	2,001	PID	PID	17,929	10,560
+2AA	AP	Zonotrichia capensis	2	15	9,436	5,558	GB	GB	9,436	5,558
+2AA	AP	Pyrrhocoma ruficeps 	1	15	4,718					
+2AA	AP	Pyrrhocoma ruficeps 	1	25	1,699	3,779	FSAF			
+2AA	AP	Syndactyla rufosuperciliata	1	25	1,699	1,000	FSAF			
+2BB	AP	Phylloscartes ventralis	2	15	9,436					
+2AA	AP	Phylloscartes ventralis	2	25	3,397	7,559	MI	MI	12,833	7,559
+2AA	AP	Turdus amaurochalinus	1	25	1,699	1,000	OB	OB	1,699	1,000
+2CC	AP	Parula pitiayumi	1	15	4,718					
+2AA	AP	Parula pitiayumi	2	25	3,397	4,780	PID			
+2AA	AP	Lathrotriccus euleri	2	25	3,397	2,001	FSAF			
+2AA	AP	Pipraeidea melanonota	1	25	1,699	1,000	POD	POD	25,666	15,118
+2BB	AP	Hemithraupis guira	3	15	14,154	8,337	POD			
+2BB	AP	Tangara preciosa	2	25	3,397	2,001	POD			
+2BB	AP	Poecilotriccus plumbeiceps	2	15	9,436					
+2CC	AP	Poecilotriccus plumbeiceps	1	25	1,699	6,558	FSAF			
+2BB	AP	Vireo olivaceus	1	15	4,718	2,779	POD			
+2BB	AP	Leptasthenura setaria	1	15	4,718					
+2BB	AP	Leptasthenura setaria	1	25	1,699	3,779	PID			
+2BB	AP	Sittasomus griseicapillus	2	25	3,397	2,001	ITR	ITR	3,397	2,001
+2CC	AP	Basileuterus culicivorus	2	25	3,397	2,001	FSAF			
+2CC	AP	Basileuterus leucoblepharus	2	25	3,397	2,001	FSGAS	FSGAS	3,397	2,001
+2CC	AP	Turdus albicollis	1	25	1,699	1,000	POS	POS	1,699	1,000
+2CC	AP	Camptostoma obsoletum	1	25	1,699	1,000	POD			
+										
+3AA	AP	Heliobletus contaminatus	1	25	1,699	1,000	ITR	ITR	16,230	9,560
+3AA	AP	Cranioleuca obsoleta	1	25	1,699	1,000	MI	MI	10,191	6,003
+3AA	AP	Camptostoma obsoletum	1	15	4,718	2,779	POD	POD	17,929	10,560
+3AA	AP	Phyllomyias virescens 	4	25	6,794	4,002	PID	PID	31,517	18,563
+3BB	AP	Parula pitiayumi	1	15	4,718					
+3AA	AP	Parula pitiayumi	2	25	3,397	4,780	PID			
+3AA	AP	Lathrotriccus euleri	2	25	3,397	2,001	FSAF	FSAF	26,421	15,562
+3AA	AP	Leptasthenura striolata	1	25	1,699	1,000	PID			
+3AA	AP	Thamnophilus caerulescens	1	25	1,699	1,000	FSAF			
+3AA	AP	Pyrrhocoma ruficeps 	2	25	3,397	2,001	FSAF			
+3AA	AP	Phylloscartes ventralis	5	25	8,493	5,002	MI			
+3AA	AP	Cyclarhis gujanensis	1	25	1,699	1,000	PID			
+3AA	AP	Leucochloris albicollis	1	25	1,699	1,000	NI	NI	1,699	1,000
+3AA	AP	Hylophilus poicilotis	2	25	3,397	2,001	IB	IB	3,397	2,001
+3AA	AP	Molothrus bonariensis	1	25	1,699	1,000	GB	GB	1,699	1,000
+3BB	AP	Muscipipra vetula	1	25	1,699	1,000	PID			
+3BB	AP	Leptasthenura setaria	1	15	4,718					
+3BB	AP	Leptasthenura setaria	2	25	3,397	4,780	PID			
+3BB	AP	Synallaxis ruficapilla	1	15	4,718	2,779	FSAF			
+3BB	AP	Tangara preciosa	1	25	1,699	1,000	POD			
+3BB	AP	Lepidocolaptes falcinellus	1	15	4,718	2,779	ITR			
+3BB	AP	Basileuterus culicivorus	4	25	6,794	4,002	FSAF			
+3BB	AP	Sittasomus griseicapillus	2	25	3,397	2,001	ITR			
+3CC	AP	Xiphorhynchus fuscus	1	15	4,718					
+3CC	AP	Xiphorhynchus fuscus	1	25	1,699	3,779	ITR			
+3CC	AP	Leptopogon amaurocephalus	1	25	1,699	1,000	FSAF			
+3CC	AP	Basileuterus leucoblepharus	1	25	1,699	1,000	FSGAS	FSGAS	1,699	1,000
+3CC	AP	Phyllomyias fasciatus	1	25	1,699	1,000	PID			
+3CC	AP	Turdus albicollis	1	25	1,699	1,000	POS	POS	1,699	1,000
+3CC	AP	Vireo olivaceus	1	15	4,718	2,779	POD			
+3CC	AP	Hemitriccus obsoletus	1	15	4,718	2,779	FSAF			
+3CC	AP	Hemithraupis guira	4	25	6,794	4,002	POD			
+3CC	AP	Myiopagis caniceps	1	25	1,699	1,000	PID			
+										
+4AA	AP	Parula pitiayumi	3	25	5,096	3,001	PID	PID	16,985	10,004
+4AA	AP	Phyllomyias virescens 	4	25	6,794	4,002	PID			
+4AA	AP	Lathrotriccus euleri	3	25	5,096	3,001	FSAF	FSAF	23,024	13,561
+4AA	AP	Turdus albicollis	1	25	1,699	1,000	POS	POS	1,699	1,000
+4AA	AP	Phylloscartes ventralis	2	15	9,436					
+4BB	AP	Phylloscartes ventralis	2	25	3,397	7,559	MI	MI	12,833	7,559
+4AA	AP	Hemitriccus obsoletus	1	25	1,699	1,000	FSAF			
+4AA	AP	Poospiza cabanisi	1	25	1,699	1,000	OB	OB	8,115	4,780
+4CC	AP	Syndactyla rufosuperciliata	1	15	4,718					
+4AA	AP	Syndactyla rufosuperciliata	1	25	1,699	3,779	FSAF			
+4AA	AP	Sittasomus griseicapillus	2	25	3,397	2,001	ITR	ITR	6,794	4,002
+4AA	AP	Piculus aurulentus	1	25	1,699	1,000	ITR			
+4BB	AP	Basileuterus leucoblepharus	1	25	1,699	1,000	FSGAS	FSGAS	1,699	1,000
+4BB	AP	Camptostoma obsoletum	1	25	1,699	1,000	POD	POD	6,794	4,002
+4BB	AP	Hemithraupis guira	2	25	3,397	2,001	POD			
+4BB	AP	Heliobletus contaminatus	1	25	1,699	1,000	ITR			
+4BB	AP	Pipraeidea melanonota	1	25	1,699	1,000	POD			
+4CC	AP	Cyclarhis gujanensis	1	25	1,699	1,000	PID			
+4CC	AP	Myiopagis caniceps	1	25	1,699	1,000	PID			
+4CC	AP	Basileuterus culicivorus	2	25	3,397	2,001	FSAF			
+4CC	AP	Poecilotriccus plumbeiceps	1	15	4,718	2,779	FSAF			
+4CC	AP	Saltator maxillosus	1	15	4,718					
+4CC	AP	Saltator maxillosus	1	25	1,699	3,779	OB			
+4CC	AP	Synallaxis ruficapilla	1	25	1,699	1,000	FSAF			
+4CC	AP	Leptasthenura setaria	1	25	1,699	1,000	PID			
+										
+1AA	MN	Leucochloris albicollis	1	25	1,699	1,000	NI	NI	1,699	1,000
+1AA	MN	Synallaxis ruficapilla	1	15	4,718	2,779	FSAF	FSAF	29,063	17,118
+1CC	MN	Basileuterus culicivorus	2	15	9,436					
+1AA	MN	Basileuterus culicivorus	2	25	3,397	7,559	FSAF			
+1CC	MN	Lathrotriccus euleri	1	15	4,718					
+1AA	MN	Lathrotriccus euleri	2	25	3,397	4,780	FSAF			
+1CC	MN	Parula pitiayumi	1	15	4,718					
+1AA	MN	Parula pitiayumi	2	25	3,397	4,780	PID	PID	16,230	9,560
+1CC	MN	Vireo olivaceus	1	15	4,718					
+1AA	MN	Vireo olivaceus	2	25	3,397	4,780	POD	POD	13,211	7,781
+1AA	MN	Contopus cinereus	2	25	3,397	2,001	MI	MI	8,493	5,002
+1AA	MN	Platyrinchus mystaceus 	1	25	1,699	1,000	FSAF			
+1CC	MN	Sittasomus griseicapillus	1	15	4,718					
+1AA	MN	Sittasomus griseicapillus	3	25	5,096	5,780	ITR	ITR	13,211	7,781
+1AA	MN	Pipraeidea melanonota	1	25	1,699	1,000	POD			
+1AA	MN	Picumnus nebulosus	1	25	1,699	1,000	ITR			
+1AA	MN	Tolmomyias sulphurescens	1	25	1,699	1,000	MI			
+1AA	MN	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR			
+1BB	MN	Turdus albicollis	1	25	1,699	1,000	POS	POS	1,699	1,000
+1BB	MN	Camptostoma obsoletum	2	25	3,397	2,001	POD			
+1BB	MN	Phyllomyias virescens 	1	25	1,699	1,000	PID			
+1BB	MN	Myiarchus swainsoni	1	25	1,699	1,000	PID			
+1CC	MN	Dysithamnus mentalis	1	25	1,699	1,000	FSAF			
+1CC	MN	Cyanocompsa brissonii	1	25	1,699	1,000	GB	GB	1,699	1,000
+1CC	MN	Cyclarhis gujanensis	1	15	4,718	2,779	PID			
+1CC	MN	Phylloscartes ventralis	2	25	3,397	2,001	MI			
+1CC	MN	Saltator sp.	1	15	4,718	2,779	OB	OB	4,718	2,779
+										
+2AA	MN	Basileuterus culicivorus	2	15	9,436					
+2AA	MN	Basileuterus culicivorus	3	25	5,096	8,559	FSAF	FSAF	30,762	18,119
+2AA	MN	Drymophila malura	1	15	4,718	2,779	FSAF			
+2AA	MN	Turdus rufiventris	2	25	3,397	2,001	OB	OB	9,814	5,780
+2AA	MN	Hemitriccus obsoletus	2	25	3,397	2,001	FSAF			
+2AA	MN	Colaptes melanochloros	1	25	1,699	1,000	ITR	ITR	11,890	7,003
+2AA	MN	Pachyramphus castaneus	1	25	1,699	1,000	MI	MI	10,191	6,003
+2AA	MN	Haplospiza unicolor	1	25	1,699	1,000	GB	GB	1,699	1,000
+2AA	MN	Pachyramphus viridis	1	25	1,699	1,000	PID	PID	11,512	6,781
+2AA	MN	Phyllomyias fasciatus	1	25	1,699	1,000	PID			
+2AA	MN	Philydor rufum	1	25	1,699	1,000	MI			
+2AA	MN	Tachyphonus coronatus	1	15	4,718					
+2BB	MN	Tachyphonus coronatus	1	25	1,699	3,779	OB			
+2AA	MN	Sittasomus griseicapillus	2	25	3,397	2,001	ITR			
+2BB	MN	Phylloscartes ventralis	3	25	5,096	3,001	MI			
+2BB	MN	Veniliornis spilogaster	1	25	1,699	1,000	ITR			
+2BB	MN	Heliobletus contaminatus	2	25	3,397	2,001	ITR			
+2BB	MN	Turdus albicollis	1	15	4,718					
+2BB	MN	Turdus albicollis	2	25	3,397	4,780	POS	POS	8,115	4,780
+2BB	MN	Parula pitiayumi	1	15	4,718					
+2CC	MN	Parula pitiayumi	1	25	1,699	3,779	PID			
+2BB	MN	Tolmomyias sulphurescens	1	25	1,699	1,000	MI			
+2BB	MN	Pyrrhocoma ruficeps 	1	25	1,699	1,000	FSAF			
+2BB	MN	Hemithraupis guira	3	15	14,154	8,337	POD	POD	30,007	17,674
+2BB	MN	Lepidocolaptes falcinellus	1	25	1,699	1,000	ITR			
+2BB	MN	Vireo olivaceus	1	15	4,718					
+2BB	MN	Vireo olivaceus	1	25	1,699	3,779	POD			
+2BB	MN	Leptopogon amaurocephalus	1	15	4,718	2,779	FSAF			
+2BB	MN	Hylophilus poicilotis	1	25	1,699	1,000	IB	IB	1,699	1,000
+2BB	MN	Pipraeidea melanonota	2	15	9,436	5,558	POD			
+2BB	MN	Phyllomyias virescens 	1	25	1,699	1,000	PID			
+2CC	MN	Syndactyla rufosuperciliata	1	25	1,699	1,000	FSAF			
+2CC	MN	Basileuterus leucoblepharus	2	25	3,397	2,001	FSGAS	FSGAS	3,397	2,001
+										
+3AA	MN	Lathrotriccus euleri	3	25	5,096	3,001	FSAF	FSAF	37,179	21,898
+3AA	MN	Thamnophilus caerulescens	2	15	9,436	5,558	FSAF			
+3AA	MN	Phylloscartes ventralis	1	15	4,718					
+3AA	MN	Phylloscartes ventralis	1	25	1,699	3,779	MI	MI	8,115	4,780
+3AA	MN	Vireo olivaceus	1	15	4,718	2,779	POD	POD	6,417	3,779
+3AA	MN	Heliobletus contaminatus	2	25	3,397	2,001	ITR	ITR	6,794	4,002
+3AA	MN	Hylophilus poicilotis	1	25	1,699	1,000	IB	IB	1,699	1,000
+3AA	MN	Basileuterus culicivorus	1	15	4,718					
+3AA	MN	Basileuterus culicivorus	4	25	6,794	6,781	FSAF			
+3AA	MN	Trogon surrucura	1	25	1,699	1,000	FFI	FFI	1,699	1,000
+3CC	MN	Basileuterus leucoblepharus	2	15	9,436					
+3AA	MN	Basileuterus leucoblepharus	1	25	1,699	6,558	FSGAS	FSGAS	11,135	6,558
+3AA	MN	Stephanoxis lalandi	2	5	84,926	50,021	NI	NI	84,926	50,021
+3AA	MN	Sittasomus griseicapillus	2	25	3,397	2,001	ITR			
+3BB	MN	Myiarchus swainsoni	2	25	3,397	2,001	PID	PID	14,909	8,782
+3BB	MN	Philydor rufum	1	25	1,699	1,000	MI			
+3BB	MN	Parula pitiayumi	1	15	4,718					
+3BB	MN	Parula pitiayumi	2	25	3,397	4,780	PID			
+3BB	MN	Euphonia chalybea	1	25	1,699	1,000	POD			
+3BB	MN	Phyllomyias virescens 	1	25	1,699	1,000	PID			
+3BB	MN	Turdus albicollis	2	15	9,436					
+3BB	MN	Turdus albicollis	3	25	5,096	8,559	POS	POS	16,230	9,560
+3BB	MN	Pyrrhocoma ruficeps 	2	15	9,436	5,558	FSAF			
+3CC	MN	Schiffornis virescens	1	25	1,699	1,000	POS			
+3CC	MN	Dysithamnus mentalis	1	25	1,699	1,000	FSAF			
+3CC	MN	Phyllomyias fasciatus	1	25	1,699	1,000	PID			
+										
+4AA	MN	Schiffornis virescens	1	15	4,718					
+4AA	MN	Schiffornis virescens	1	25	1,699	3,779	POS	POS	9,814	5,780
+4AA	MN	Basileuterus culicivorus	2	25	3,397	2,001	FSAF	FSAF	24,345	14,339
+4AA	MN	Vireo olivaceus	1	15	4,718	2,779	POD	POD	9,814	5,780
+4BB	MN	Phylloscartes ventralis	1	15	4,718					
+4AA	MN	Phylloscartes ventralis	2	25	3,397	4,780	MI	MI	8,115	4,780
+4BB	MN	Phyllomyias virescens 	1	15	4,718					
+4AA	MN	Phyllomyias virescens 	1	25	1,699	3,779	PID	PID	13,211	7,781
+4AA	MN	Turdus albicollis	2	25	3,397	2,001	POS			
+4AA	MN	Cacicus chrysopterus 	1	25	1,699	1,000	POD			
+4AA	MN	Lathrotriccus euleri	2	15	9,436					
+4AA	MN	Lathrotriccus euleri	1	25	1,699	6,558	FSAF			
+4AA	MN	Hemithraupis guira	2	25	3,397	2,001	POD			
+4AA	MN	Leptopogon amaurocephalus	1	25	1,699	1,000	FSAF			
+4AA	MN	Dysithamnus mentalis	1	25	1,699	1,000	FSAF			
+4BB	MN	Platyrinchus mystaceus 	1	15	4,718	2,779	FSAF			
+4BB	MN	Drymophila malura	1	25	1,699	1,000	FSAF			
+4BB	MN	Parula pitiayumi	2	25	3,397	2,001	PID			
+4BB	MN	Cyclarhis gujanensis	1	25	1,699	1,000	PID			
+4CC	MN	Myiodynastes maculatus	1	25	1,699	1,000	OB	OB	1,699	1,000
+4CC	MN	Phyllomyias burmeisteri	1	25	1,699	1,000	PID			
+4CC	MN	Xenops rutilans	1	25	1,699	1,000	ITR	ITR	1,699	1,000
