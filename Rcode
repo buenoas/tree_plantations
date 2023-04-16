@@ -664,9 +664,6 @@ prestes_pc$IPA.FA2 = NULL
 prestes_pc$IPA.PF1 = NULL
 prestes_pc$IPA.PF2 = NULL
 
-# CONVERTE NA EM ZERO
-prestes_pc[is.na(prestes_pc)] = 0
-
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(prestes_pc)
 
