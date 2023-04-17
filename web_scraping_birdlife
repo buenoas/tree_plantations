@@ -57,3 +57,6 @@ rbind(head(birdlife),
 
 # Save the table
 write.table(birdlife, "forest_dependency.txt", row.names = FALSE)
+
+# Load the function in R
+# source("https://raw.githubusercontent.com/buenoas/tree_plantations/main/web_scraping_birdlife")
