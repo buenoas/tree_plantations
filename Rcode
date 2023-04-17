@@ -928,3 +928,11 @@ write.table(datasets_df,
             "tree_plantations_datasets.txt",
             sep = "\t",
             row.names = FALSE)
+
+
+############################
+### IMPORTA OS DATASETS ####
+############################
+
+datasets = read.table("https://raw.githubusercontent.com/buenoas/tree_plantations/main/tree_plantations_datasets.txt",
+                      header = TRUE)
