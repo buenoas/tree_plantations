@@ -858,5 +858,31 @@ datasets = list(Amarante2023 = amarante,
                 Zurita2006loc = zurita_local,
                 Zurita2006reg = zurita_regional)
 
+# Lista geral de especies
+general_spp_list = sort(unique(do.call(c, lapply(datasets, function(x) rownames(x)))))
+
+# Importa os dados de dependencia de floresta
+forest_dependency = read.csv("https://raw.githubusercontent.com/buenoas/tree_plantations/main/forest_dependency.csv")
+
+# Junta os dados dos datasets com a dependencia de floresta
+datasets[[1]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[1]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[2]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[2]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[3]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[3]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[4]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[4]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[5]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[5]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[6]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[6]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[7]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[7]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[8]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[8]]),
+                                                                            forest_dependency$Scientific.name)]
+datasets[[9]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[9]]),
+                                                                            forest_dependency$Scientific.name)]
+
 # Remove a coluna datasetID
-datasets = lapply(datasets, function(x) x[, -4])
+#datasets = lapply(datasets, function(x) x[, -4])
