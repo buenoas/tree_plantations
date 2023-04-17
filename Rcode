@@ -884,5 +884,46 @@ datasets[[8]]$forest_dependency = forest_dependency$Forest.dependency[match(rown
 datasets[[9]]$forest_dependency = forest_dependency$Forest.dependency[match(rownames(datasets[[9]]),
                                                                             forest_dependency$Scientific.name)]
 
-# Remove a coluna datasetID
-#datasets = lapply(datasets, function(x) x[, -4])
+# ORGANIZA AS COLUNAS DOS DATASETS
+datasets[[1]]$species = rownames(datasets[[1]])
+datasets[[1]] = datasets[[1]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[1]]) = NULL
+
+datasets[[2]]$species = rownames(datasets[[2]])
+datasets[[2]] = datasets[[2]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[2]]) = NULL
+
+datasets[[3]]$species = rownames(datasets[[3]])
+datasets[[3]] = datasets[[3]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[3]]) = NULL
+
+datasets[[4]]$species = rownames(datasets[[4]])
+datasets[[4]] = datasets[[4]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[4]]) = NULL
+
+datasets[[5]]$species = rownames(datasets[[5]])
+datasets[[5]] = datasets[[5]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[5]]) = NULL
+
+datasets[[6]]$species = rownames(datasets[[6]])
+datasets[[6]] = datasets[[6]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[6]]) = NULL
+
+datasets[[7]]$species = rownames(datasets[[7]])
+datasets[[7]] = datasets[[7]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[7]]) = NULL
+
+datasets[[8]]$species = rownames(datasets[[8]])
+datasets[[8]] = datasets[[8]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[8]]) = NULL
+
+datasets[[9]]$species = rownames(datasets[[9]])
+datasets[[9]] = datasets[[9]][, c(6, 5, 1, 2, 3, 4)]
+rownames(datasets[[9]]) = NULL
+
+# SALVA OS DATASETS EM UM ARQUIVO UNICO
+datasets_df = do.call(rbind, datasets)
+rownames(datasets_df) = NULL
+write.table(datasets_df,
+            "tree_plantations_datasets.txt",
+            sep = "\t")
