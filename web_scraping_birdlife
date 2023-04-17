@@ -1,0 +1,59 @@
+##########################
+### BIRDLIFE DATA ZONE ###
+### WEB SCRAPING #########
+##########################
+#options(warn=-1)
+
+# Load required packages
+library(stringr)
+
+# Import data
+birdlife = read.csv("https://raw.githubusercontent.com/buenoas/tree_plantations/main/HBW_BirdLife_List of birds_v7.txt",
+                    sep = "\t", header = TRUE)
+
+# Mantem apenas as especies registradas nos datasets
+#birdlife = birdlife[match(general_spp_list, birdlife$Scientific.name), ]
+
+# Cria uma coluna para forest dependency
+birdlife$Forest.dependency = NA
+
+# Cria uma coluna para status migratorio
+birdlife$Migratory.status = NA
+
+
+# WEB SCRAPING
+for (i in 1:nrow(birdlife)) {
+  
+  url = str_to_lower(
+    gsub(" ", "-", 
+         paste0("http://datazone.birdlife.org/species/factsheet/",
+                paste(birdlife$Common.name[i],
+                      birdlife$Scientific.name[i], sep = "-"),
+                "/details")))
+  url = gsub("'", "", url)
+  url = gsub("ç", "c", url)
+  url = gsub("ü", "u", url)
+  
+  sp = readLines(url)
+  
+  birdlife[i, "Forest.dependency"] = str_squish(sp[which(grepl("Forest dependency", sp)) + 1])
+  birdlife[i, "Migratory.status"] = str_squish(sp[which(grepl("Migratory status", sp)) + 1])
+  
+  print(paste0(i, " | ",
+               birdlife$Scientific.name[i], " | ",
+               round(i/nrow(birdlife) * 100, 2), "%"))
+  
+}
+
+
+birdlife$Forest.dependency = gsub("<td>", "", birdlife$Forest.dependency)
+birdlife$Forest.dependency = gsub("</td>", "", birdlife$Forest.dependency)
+
+birdlife$Migratory.status = gsub("<td>", "", birdlife$Migratory.status)
+birdlife$Migratory.status = gsub("</td>", "", birdlife$Migratory.status)
+
+rbind(head(birdlife),
+      tail(birdlife))
+
+# Save the table
+write.table(birdlife, "forest_dependency.txt", row.names = FALSE)
