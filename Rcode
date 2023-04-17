@@ -926,4 +926,5 @@ datasets_df = do.call(rbind, datasets)
 rownames(datasets_df) = NULL
 write.table(datasets_df,
             "tree_plantations_datasets.txt",
-            sep = "\t")
+            sep = "\t",
+            row.names = FALSE)
