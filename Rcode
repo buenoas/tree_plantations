@@ -4,6 +4,11 @@
 #"#745086" (roxo)
 #"#B28269" (marrom)
 
+# Nova paleta de cores
+#"#2DBF81" (verde)
+#"#812DBF" (roxo)
+#"#BF812D" (marrom)
+
 # LIMPA A AREA DE TRABALHO
 remove(list = ls())
 
@@ -924,15 +929,97 @@ rownames(datasets[[9]]) = NULL
 # SALVA OS DATASETS EM UM ARQUIVO UNICO
 datasets_df = do.call(rbind, datasets)
 rownames(datasets_df) = NULL
-write.table(datasets_df,
-            "tree_plantations_datasets.txt",
-            sep = "\t",
-            row.names = FALSE)
+#write.table(datasets_df,
+#            "tree_plantations_datasets.txt",
+#            sep = "\t",
+#            row.names = FALSE)
 
 
 ############################
 ### IMPORTA OS DATASETS ####
 ############################
 
-datasets = read.table("https://raw.githubusercontent.com/buenoas/tree_plantations/main/tree_plantations_datasets.txt",
-                      header = TRUE)
+#datasets = read.table("https://raw.githubusercontent.com/buenoas/tree_plantations/main/tree_plantations_datasets.txt",
+#                      header = TRUE)
+
+
+###################################
+### CALCULA A RIQUEZA RAREFEITA ###
+###################################
+
+raref_list = list()
+
+for (i in 1:length(datasets)) {
+  
+  x = datasets[[i]]
+  rownames(x) = x$species
+  x$species = NULL
+  x$forest_dependency = NULL
+  x$datasetID = NULL
+  
+  raref = estimateD(x,
+                    q = 0,
+                    datatype = "abundance",
+                    base = "coverage",
+                    level = NULL,
+                    nboot = 1000,
+                    conf = 0.95)
+  
+  raref$qD.std = (raref$qD / raref[which(raref$Assemblage == "natural_forest"), "qD"]) - 1
+  raref$qD.LCL.std = (raref$qD.LCL / raref[which(raref$Assemblage == "natural_forest"), "qD"]) - 1
+  raref$qD.UCL.std = (raref$qD.UCL / raref[which(raref$Assemblage == "natural_forest"), "qD"]) - 1
+  
+  raref$datasetID = unique(datasets[[i]]$datasetID)
+  
+  raref_list[[i]] = raref
+  
+  print(i)
+  
+}
+
+raref = do.call(rbind, raref_list)
+
+# GRAFICO DA ANALISE DE RAREFACAO
+
+# Ordena os estudos do que possui maior efeito negativo para o que possui maior efeito positivo do pinus
+seq_datasets = subset(raref, Assemblage == "pine_plantation")
+seq_assemblages = seq_datasets[order(-seq_datasets$qD.std), "studyID"]
+
+raref$studyID = factor(raref$studyID,
+                       levels = seq_assemblages)
+raref$Assemblage = factor(raref$Assemblage,
+                          levels = c("pine_plantation",
+                                     "araucaria_plantation",
+                                     "natural_forest"))
+
+# Produz o grafico
+
+raref_graph =
+  
+  ggplot(raref,
+         aes(x = qD.std * 100, y = studyID, colour = Assemblage)) + 
+  
+  labs(x = "Species richness difference (%)",
+       y = NULL,
+       colour = NULL) + 
+  
+  scale_colour_manual(labels = c("Pine Plantation",
+                                 "Araucaria Plantation",
+                                 "Natural Forest"),
+                      values = c("#BF812D", "#812DBF", "#2DBF81")) +
+  
+  geom_vline(xintercept = 0, linetype = "dashed", size = 0.5) +
+  geom_point(size = 2.5, position = position_dodge(0.6)) +
+  geom_errorbar(aes(xmin = qD.LCL.std * 100, xmax = qD.UCL.std * 100),
+                size = 1/2, width = 1/3, position = position_dodge(0.6)) + 
+  
+  theme_classic(base_size = 10) + 
+  theme(legend.position = "top",
+        axis.line = element_line(colour = "black"),
+        axis.ticks = element_line(colour = "black"),
+        axis.text = element_text(colour = "black"),
+        axis.title = element_text(colour = "black")) +
+  guides(color = guide_legend(reverse = TRUE))
+
+# Salva o grafico
+ggsave(raref_graph, filename = "raref_graph.pdf", w = 15, h = 15, units = "cm")
