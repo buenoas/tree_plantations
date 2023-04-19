@@ -947,6 +947,8 @@ rownames(datasets_df) = NULL
 ### CALCULA A RIQUEZA RAREFEITA ###
 ###################################
 
+# TODAS AS ESPECIES
+
 raref_list = list()
 
 for (i in 1:length(datasets)) {
@@ -957,11 +959,14 @@ for (i in 1:length(datasets)) {
   x$forest_dependency = NULL
   x$datasetID = NULL
   
+  effort = min(c(max(colSums(x)),
+                 min(colSums(x)) * 2))
+  
   raref = estimateD(x,
                     q = 0,
                     datatype = "abundance",
-                    base = "coverage",
-                    level = NULL,
+                    base = "size",
+                    level = effort,
                     nboot = 1000,
                     conf = 0.95)
   
@@ -983,10 +988,10 @@ raref = do.call(rbind, raref_list)
 
 # Ordena os estudos do que possui maior efeito negativo para o que possui maior efeito positivo do pinus
 seq_datasets = subset(raref, Assemblage == "pine_plantation")
-seq_assemblages = seq_datasets[order(-seq_datasets$qD.std), "studyID"]
+seq_assemblages = seq_datasets[order(-seq_datasets$qD.std), "datasetID"]
 
-raref$studyID = factor(raref$studyID,
-                       levels = seq_assemblages)
+raref$datasetID = factor(raref$datasetID,
+                         levels = seq_assemblages)
 raref$Assemblage = factor(raref$Assemblage,
                           levels = c("pine_plantation",
                                      "araucaria_plantation",
@@ -994,32 +999,131 @@ raref$Assemblage = factor(raref$Assemblage,
 
 # Produz o grafico
 
-raref_graph =
+raref_graph_all =
   
   ggplot(raref,
-         aes(x = qD.std * 100, y = studyID, colour = Assemblage)) + 
+         aes(x = qD.std * 100, y = datasetID, colour = Assemblage)) + 
   
   labs(x = "Species richness difference (%)",
        y = NULL,
-       colour = NULL) + 
+       colour = NULL,
+       title = "All birds") + 
   
   scale_colour_manual(labels = c("Pine Plantation",
                                  "Araucaria Plantation",
                                  "Natural Forest"),
                       values = c("#BF812D", "#812DBF", "#2DBF81")) +
   
-  geom_vline(xintercept = 0, linetype = "dashed", size = 0.5) +
-  geom_point(size = 2.5, position = position_dodge(0.6)) +
+  geom_vline(xintercept = 0, linetype = "dashed", linewidth = 1/3, colour = "grey") +
+  geom_point(size = 2, position = position_dodge(0.6)) +
   geom_errorbar(aes(xmin = qD.LCL.std * 100, xmax = qD.UCL.std * 100),
-                size = 1/2, width = 1/3, position = position_dodge(0.6)) + 
+                size = 1/3, width = 1/3, position = position_dodge(0.6)) + 
   
-  theme_classic(base_size = 10) + 
-  theme(legend.position = "top",
-        axis.line = element_line(colour = "black"),
-        axis.ticks = element_line(colour = "black"),
+  theme_classic(base_size = 12) + 
+  theme(legend.position = "bottom",
+        axis.title = element_text(colour = "black"),
         axis.text = element_text(colour = "black"),
-        axis.title = element_text(colour = "black")) +
+        axis.ticks = element_line(colour = "black", size = 1/3),
+        axis.line = element_line(colour = "black", size = 1/3),
+        plot.title = element_text(h = 0.5)) +
   guides(color = guide_legend(reverse = TRUE))
 
+# Visualiza o grafico
+raref_graph_all
+
 # Salva o grafico
-ggsave(raref_graph, filename = "raref_graph.pdf", w = 15, h = 15, units = "cm")
+ggsave(raref_graph_all, filename = "raref_graph_size_all.pdf",
+       w = 15, h = 15, units = "cm")
+
+
+# ESPECIES FLORESTAIS
+
+raref_list = list()
+
+for (i in 1:length(datasets)) {
+  
+  x = datasets[[i]]
+  
+  # Seleciona apenas as especies florestais
+  x = x[which(x$forest_dependency == "High" | x$forest_dependency == "Medium"), ]
+  
+  rownames(x) = x$species
+  x$species = NULL
+  x$forest_dependency = NULL
+  x$datasetID = NULL
+  
+  effort = min(c(max(colSums(x)),
+                 min(colSums(x)) * 2))
+  
+  raref = estimateD(x,
+                    q = 0,
+                    datatype = "abundance",
+                    base = "size",
+                    level = effort,
+                    nboot = 1000,
+                    conf = 0.95)
+  
+  raref$qD.std = (raref$qD / raref[which(raref$Assemblage == "natural_forest"), "qD"]) - 1
+  raref$qD.LCL.std = (raref$qD.LCL / raref[which(raref$Assemblage == "natural_forest"), "qD"]) - 1
+  raref$qD.UCL.std = (raref$qD.UCL / raref[which(raref$Assemblage == "natural_forest"), "qD"]) - 1
+  
+  raref$datasetID = unique(datasets[[i]]$datasetID)
+  
+  raref_list[[i]] = raref
+  
+  print(i)
+  
+}
+
+raref = do.call(rbind, raref_list)
+
+# GRAFICO DA ANALISE DE RAREFACAO
+
+# Ordena os estudos do que possui maior efeito negativo para o que possui maior efeito positivo do pinus
+seq_datasets = subset(raref, Assemblage == "pine_plantation")
+seq_assemblages = seq_datasets[order(-seq_datasets$qD.std), "datasetID"]
+
+raref$datasetID = factor(raref$datasetID,
+                         levels = seq_assemblages)
+raref$Assemblage = factor(raref$Assemblage,
+                          levels = c("pine_plantation",
+                                     "araucaria_plantation",
+                                     "natural_forest"))
+
+# Produz o grafico
+
+raref_graph_forest =
+  
+  ggplot(raref,
+         aes(x = qD.std * 100, y = datasetID, colour = Assemblage)) + 
+  
+  labs(x = "Species richness difference (%)",
+       y = NULL,
+       colour = NULL,
+       title = "Forest birds") + 
+  
+  scale_colour_manual(labels = c("Pine Plantation",
+                                 "Araucaria Plantation",
+                                 "Natural Forest"),
+                      values = c("#BF812D", "#812DBF", "#2DBF81")) +
+  
+  geom_vline(xintercept = 0, linetype = "dashed", linewidth = 1/3, colour = "grey") +
+  geom_point(size = 2, position = position_dodge(0.6)) +
+  geom_errorbar(aes(xmin = qD.LCL.std * 100, xmax = qD.UCL.std * 100),
+                size = 1/3, width = 1/3, position = position_dodge(0.6)) + 
+  
+  theme_classic(base_size = 12) + 
+  theme(legend.position = "bottom",
+        axis.title = element_text(colour = "black"),
+        axis.text = element_text(colour = "black"),
+        axis.ticks = element_line(colour = "black", size = 1/3),
+        axis.line = element_line(colour = "black", size = 1/3),
+        plot.title = element_text(h = 0.5)) +
+  guides(color = guide_legend(reverse = TRUE))
+
+# Visualiza o grafico
+raref_graph_forest
+
+# Salva o grafico
+ggsave(raref_graph_forest, filename = "raref_graph_size_forest.pdf",
+       w = 15, h = 15, units = "cm")
