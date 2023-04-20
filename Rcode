@@ -1009,22 +1009,27 @@ raref_graph_all =
        colour = NULL,
        title = "All birds") + 
   
+  scale_x_continuous(limits = c(-60, 60),
+                     breaks = c(-50, -25, 0, 25, 50)) +
   scale_colour_manual(labels = c("Pine Plantation",
                                  "Araucaria Plantation",
                                  "Natural Forest"),
                       values = c("#BF812D", "#812DBF", "#2DBF81")) +
   
-  geom_vline(xintercept = 0, linetype = "dashed", linewidth = 1/3, colour = "grey") +
+  geom_vline(xintercept = 0, linetype = "solid", linewidth = 1/3, colour = "black") +
+  geom_vline(xintercept = c(-50, -25, 25, 50), linetype = "dashed", linewidth = 1/3, colour = "grey") +
   geom_point(size = 2, position = position_dodge(0.6)) +
   geom_errorbar(aes(xmin = qD.LCL.std * 100, xmax = qD.UCL.std * 100),
-                size = 1/3, width = 1/3, position = position_dodge(0.6)) + 
+                linewidth = 1/3, width = 0, position = position_dodge(0.6)) + 
   
   theme_classic(base_size = 12) + 
   theme(legend.position = "bottom",
         axis.title = element_text(colour = "black"),
         axis.text = element_text(colour = "black"),
-        axis.ticks = element_line(colour = "black", size = 1/3),
-        axis.line = element_line(colour = "black", size = 1/3),
+        axis.ticks.x = element_blank(),
+        axis.line.x = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.line.y = element_blank(),
         plot.title = element_text(h = 0.5)) +
   guides(color = guide_legend(reverse = TRUE))
 
@@ -1102,22 +1107,27 @@ raref_graph_forest =
        colour = NULL,
        title = "Forest birds") + 
   
+  scale_x_continuous(limits = c(-60, 60),
+                     breaks = c(-50, -25, 0, 25, 50)) +
   scale_colour_manual(labels = c("Pine Plantation",
                                  "Araucaria Plantation",
                                  "Natural Forest"),
                       values = c("#BF812D", "#812DBF", "#2DBF81")) +
   
-  geom_vline(xintercept = 0, linetype = "dashed", linewidth = 1/3, colour = "grey") +
+  geom_vline(xintercept = 0, linetype = "solid", linewidth = 1/3, colour = "black") +
+  geom_vline(xintercept = c(-50, -25, 25, 50), linetype = "dashed", linewidth = 1/3, colour = "grey") +
   geom_point(size = 2, position = position_dodge(0.6)) +
   geom_errorbar(aes(xmin = qD.LCL.std * 100, xmax = qD.UCL.std * 100),
-                size = 1/3, width = 1/3, position = position_dodge(0.6)) + 
+                linewidth = 1/3, width = 0, position = position_dodge(0.6)) + 
   
   theme_classic(base_size = 12) + 
   theme(legend.position = "bottom",
         axis.title = element_text(colour = "black"),
         axis.text = element_text(colour = "black"),
-        axis.ticks = element_line(colour = "black", size = 1/3),
-        axis.line = element_line(colour = "black", size = 1/3),
+        axis.ticks.x = element_blank(),
+        axis.line.x = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.line.y = element_blank(),
         plot.title = element_text(h = 0.5)) +
   guides(color = guide_legend(reverse = TRUE))
 
