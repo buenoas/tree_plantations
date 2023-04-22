@@ -843,7 +843,7 @@ rownames(lima)[which(is.na(match(rownames(lima), spp_maps_lima)))]
 lima = lima[order(rownames(lima)), ]
 
 # ADICIONA O NOME DO DATASET
-lima$datasetID = "Mendonca-Lima2012"
+lima$datasetID = "Mendonça-Lima2012"
 
 # VISUALIZA A ESTRUTURA DOS DADOS
 head(lima)
