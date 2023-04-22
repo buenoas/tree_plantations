@@ -29,6 +29,7 @@ library(ggplot2)
 library(iNEXT)
 library(rgeos)
 library(rgdal)
+library(ggstats)
 
 
 ###############################################
@@ -1016,11 +1017,12 @@ raref_graph_all =
                                  "Natural Forest"),
                       values = c("#BF812D", "#812DBF", "#2DBF81")) +
   
-  geom_vline(xintercept = 0, linetype = "solid", linewidth = 1/3, colour = "black") +
-  geom_vline(xintercept = c(-50, -25, 25, 50), linetype = "dashed", linewidth = 1/3, colour = "grey") +
+  geom_stripped_rows(colour = FALSE) +
+  geom_vline(xintercept = 0, linetype = "solid", size = 1/3, colour = "grey") +
+  geom_vline(xintercept = c(-50, -25, 25, 50), linetype = "dashed", size = 1/3, colour = "grey") +
   geom_point(size = 2, position = position_dodge(0.6)) +
   geom_errorbar(aes(xmin = qD.LCL.std * 100, xmax = qD.UCL.std * 100),
-                linewidth = 1/3, width = 0, position = position_dodge(0.6)) + 
+                size = 1/3, width = 0, position = position_dodge(0.6)) + 
   
   theme_classic(base_size = 12) + 
   theme(legend.position = "bottom",
@@ -1096,7 +1098,6 @@ raref$Assemblage = factor(raref$Assemblage,
                                      "natural_forest"))
 
 # Produz o grafico
-
 raref_graph_forest =
   
   ggplot(raref,
@@ -1114,11 +1115,12 @@ raref_graph_forest =
                                  "Natural Forest"),
                       values = c("#BF812D", "#812DBF", "#2DBF81")) +
   
-  geom_vline(xintercept = 0, linetype = "solid", linewidth = 1/3, colour = "black") +
-  geom_vline(xintercept = c(-50, -25, 25, 50), linetype = "dashed", linewidth = 1/3, colour = "grey") +
+  geom_stripped_rows(colour = FALSE) +
+  geom_vline(xintercept = 0, linetype = "solid", size = 1/3, colour = "grey") +
+  geom_vline(xintercept = c(-50, -25, 25, 50), linetype = "dashed", size = 1/3, colour = "grey") +
   geom_point(size = 2, position = position_dodge(0.6)) +
   geom_errorbar(aes(xmin = qD.LCL.std * 100, xmax = qD.UCL.std * 100),
-                linewidth = 1/3, width = 0, position = position_dodge(0.6)) + 
+                size = 1/3, width = 0, position = position_dodge(0.6)) + 
   
   theme_classic(base_size = 12) + 
   theme(legend.position = "bottom",
